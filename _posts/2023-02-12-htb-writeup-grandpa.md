@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Grandpa - Hack The Box
-excerpt: "Grandpa is a quick and fun easy box where're goint to exploit Microsoft IIS 6.0 with a Remote buffer overflow script and also we're use the churrasco script to be nt authority system"
+excerpt: "Grandpa is a quick and fun easy box where're goint to exploit Microsoft IIS 6.0 with a Remote buffer overflow script and also we're use the churrasco script to be nt authority system."
 date: 2023-01-12
 classes: wide
 header:
