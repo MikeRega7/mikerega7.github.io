@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Knife - Hack The Box
-excerpt: "Knife is a quick and fun easy box ."
+excerpt: "Knife is a quick and fun easy box where we have to abuse of the User-Agent of PHP 8.1.0-dev to have RCE and after that be root by taking advantage of the Knife binary"
 date: 2023-01-10
 classes: wide
 header:

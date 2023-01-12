@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Tabby - Hack The Box
-excerpt: "Tabby is fun and easy box"
+excerpt: "Tabby is fun and easy box where have to abuse of a LFI after that of Tomcat Host manager and create a malicious war also for root abuse of the LXC"
 date: 2023-01-11
 classes: wide
 header:
@@ -18,7 +18,7 @@ tags:
 ---
 ![](/assets/images/htb-writeup-tabby/xd.png)
 
-Tabby is a fun and easy box where we have to abuse of a LFI after that of Tomcat Host manager and create a malicious war with for root abuse of the LXC 
+Tabby is a fun and easy box where we have to abuse of a LFI after that of Tomcat Host manager and create a malicious war for root abuse of the LXC 
 
 ## Port Scan 
 

@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Shoppy - Hack The Box
-excerpt: "Shoppy is a quick and fun easy box"
+excerpt: "Shoppy is a quick and fun easy box where we have to do a Sqli and use docker to win access to the machine it's a linux machine"
 date: 2023-01-10
 classes: wide
 header:
