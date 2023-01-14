@@ -17,7 +17,7 @@ tags:
 ---
 ![](/assets/images/htb-writeup-october/october_logo.png)
 
-October is a fun medium linux box where're going to upload a php5 reverse shell to win access and to be root we have to exploit a Buffer Overflow.Important= Maybe the writeup have errors according me everything is good but I had errors with the file of the writeup sorry if something is wrong I'll fix it
+October is a fun medium linux box where're going to upload a php5 reverse shell to win access and to be root we have to exploit a Buffer Overflow.Important= Maybe the writeup have errors according me everything is good but I had errors with the file of the writeup sorry if something is wrong I'll fix it.
 
 ## Port Scan
 
