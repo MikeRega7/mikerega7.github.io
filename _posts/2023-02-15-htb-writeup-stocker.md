@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Stocker - Hack The Box
-excerpt: "Stocker is a quick and fun easy box where're goint to exploit a no sql inyection also we're goint to use burpsuite to intercept the request and change the content-type to json then there will be an lfi to obtain credentials when we gain access to the login of a subdomain found we can connect with ssh and to become root we will only have to create a .js file. ."
+excerpt: "Stocker is a quick and fun easy box where're goint to exploit a no sql inyection also we're goint to use burpsuite to intercept the request and change the content-type to json then there will be an lfi to obtain credentials when we gain access to the login of a subdomain found we can connect with ssh and to become root we will only have to create a .js file."
 date: 2023-01-15
 classes: wide
 header:
