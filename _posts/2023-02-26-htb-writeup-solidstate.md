@@ -1,7 +1,7 @@
 ---
 layout: single
 title: SolidState - Hack The Box
-excerpt: "SolidState is a quick and fun medium box where we're going to exploit a vulnerability of the service Apache James after that we're goint to change the credentials of many users of the machine to see through an email from a user of the machine we found credentials to be able to connect via ssh and to be root we have to abuse cron jobs"
+excerpt: "SolidState is a quick and fun medium box where we're going to exploit a vulnerability of the service Apache James after that we're goint to change the credentials of many users of the machine to see through an email from a user of the machine we found credentials to be able to connect via ssh and to be root we have to abuse cron jobs."
 date: 2023-01-26
 classes: wide
 header:
