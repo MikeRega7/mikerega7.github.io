@@ -386,7 +386,7 @@ uid=0(root) gid=0(root) groups=0(root)
 ```
 
 ## Root.txt
-Pues ya estaria completo puedes contestar las preguntas que te hacen en TryHackMe con todo lo que hemos echo 
+Pues ya estaria completo puedes contestar las preguntas que te hacen en TryHackMe con todo lo que hemos echo. 
 
 ```shell
 # cd /root
