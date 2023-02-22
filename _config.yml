@@ -103,9 +103,9 @@ analytics:
 author:
   name             : "Miguelrega7"
   avatar           : "/assets/images/avatar.png"
-  bio              : "Cybersecurity student and CTF player"
+  bio              : "Cybersecurity and CTF player"
   location         : "México"
-  email            : #"info@snowscan.io"
+  email            : # n
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -117,7 +117,7 @@ author:
   github           : "MikeRega7"
   gitlab           :
   google_plus      :
-  keybase          : # "snowscan"
+  keybase          : # "m"
   instagram        :
   lastfm           :
   linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
@@ -126,7 +126,7 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : # "snowscan"
+  twitter          : # "m"
   vine             :
   weibo            :
   xing             :
