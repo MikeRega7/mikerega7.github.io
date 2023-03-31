@@ -9,7 +9,7 @@ header:
   teaser_home_page: true
   icon: /assets/images/tryhackme.webp
 categories:
-  - hackthebox
+  - TryHackme
   - infosec
 tags:  
   - SUID
