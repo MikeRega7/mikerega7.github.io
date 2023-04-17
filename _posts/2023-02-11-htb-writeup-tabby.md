@@ -5,7 +5,7 @@ excerpt: "Tabby is fun and easy box where have to abuse of a LFI after that of T
 date: 2023-01-11
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-tabby/xd.png
+  teaser: /assets/images/htb-writeup-tabby/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -16,7 +16,10 @@ tags:
   - LXC
   - Tomcat 
 ---
-![](/assets/images/htb-writeup-tabby/xd.png)
+
+<p align="center">
+<img src="/assets/images/htb-writeup-tabby/xd.png">
+</p>
 
 Tabby is a fun and easy box where we have to abuse of a LFI after that of Tomcat Host manager and create a malicious war for root abuse of the LXC 
 

@@ -5,7 +5,7 @@ excerpt: "Knife is a quick and fun easy box where we have to abuse of the User-A
 date: 2023-01-10
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-knife/knife_logo.png
+  teaser: /assets/images/htb-writeup-knife/new3.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -16,7 +16,9 @@ tags:
   - Abusing Sudoers Privilege (Knife Binary) [Privilege Escalation]
 ---
 
-![](/assets/images/htb-writeup-knife/knife_logo.png)
+<p align="center">
+<img src="/assets/images/htb-writeup-knife/knife_logo.png">
+</p>
 
 Knife is a quick and fun easy box where we have to abuse of the User-Agent of PHP 8.1.0-dev to have RCE and after that be root by taking advantage of the Knife binary.
 

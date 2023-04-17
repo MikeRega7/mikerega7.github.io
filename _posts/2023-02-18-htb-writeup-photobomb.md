@@ -5,7 +5,7 @@ excerpt: "Photobomb es una maquina de dificultad facil donde en el propio codigo
 date: 2023-02-18
 classes: wide
 header:
-  teaser: /assets/images/htb-writeup-photobomb/iconphoto.png
+  teaser: /assets/images/htb-writeup-photobomb/new.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
@@ -16,7 +16,9 @@ tags:
   - Sudoers privilege
 ---
 
-![](/assets/images/htb-writeup-photobomb/iconphoto.png)
+<p align="center">
+<img src="/assets/images/htb-writeup-photobomb/icon.png">
+</p>
 
 ## PortScan
 
