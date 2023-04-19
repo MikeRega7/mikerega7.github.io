@@ -17,7 +17,7 @@ tags:
 ---
 
 <p align="center">
-<img src="/assets/images/htb-writeup-photobomb/icon.png">
+<img src="/assets/images/htb-writeup-photobomb/iconphoto.png">
 </p>
 
 ## PortScan

