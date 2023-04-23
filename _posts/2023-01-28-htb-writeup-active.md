@@ -4,6 +4,9 @@ title: Active - Hack The Box
 excerpt: "Active is a quick and fun medium box where we have to do SMB enumeration to obtain credentials of a valid user in the dc and Kerberoasting to receive a ticket to crack this ticket is for the administrator user"
 date: 2023-01-28
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/htb-writeup-active/new.png
   teaser_home_page: true

@@ -4,6 +4,9 @@ title: Relevant - TryHackMe
 excerpt: "En esta ocasion vamos a estar resolviendo el room de Tryhackme que se llama Relevant es una maquina windows que esa catalogada como media pero yo diria que es facil vamos a estar enumerando por smb recursos compartidos a nivel de red y nos aprovecharemos del privilegio que tenemos para poder subir archivos y asi ganar acceso para la escalada de privilegios nos aprovecharemos de un privilegio que tenemos"
 date: 2023-04-05
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-relevant/icon.png
   teaser_home_page: true

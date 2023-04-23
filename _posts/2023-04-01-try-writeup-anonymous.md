@@ -4,6 +4,9 @@ title: Anonymous - TryHackMe
 excerpt: "Not the hacking group, en este CTF de la plataforma de Tryhackme vamos a estar enumerando el servicio `ftp` `smb` y estaremos aprovechandonos que que podemos alterar un archivo para que nos de una reverse shell y ganar acceso al sistema despues de eso para escalar privilegios vamos a estar haciendolo de varios formas ya que la maquina tiene varias formas de escalar privilegios"
 date: 2023-04-01
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-anonymous/fondo.png
   teaser_home_page: true

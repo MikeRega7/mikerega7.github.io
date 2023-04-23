@@ -4,6 +4,9 @@ title: LazyAdmin - TryHackMe
 excerpt: "La maquina LazyAdmin de la plataforma de Tryhackme esta catalogada como facil donde nos dicen que hay muchas formas de hacer la maquina tendremos que aprovecharnos de una vulnerabilidad que tiene el servicio SweetRice CMS para mediante un archivo expuesto tener el nombre de usuario y posteriormente crackearemos el hash MD5 que es muy debil para conectarnos al servicio despues subiremos nuestra reverse shell para ganar acceso como www-data para la escalada nos aprovecharemos que podemos alterar un archivo que ejecuta root"
 date: 2023-03-07
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-lazyadmin/icon.jpg
   teaser_home_page: true

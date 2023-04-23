@@ -4,6 +4,9 @@ title: Cheesey CheeseyJack - VulnHub
 excerpt: "En esta ocasion vamos a estar resolviendo la maquina Cheesey: CheeseyJack de VulnHub donde vamos a estar enumerando el puerto 111 para crear una montura y ver que es lo que hay despues de eso vamos a estar empleando fuzzing para descubrir un panel de login y usando un diccionario personalizado de contraseñas lo vamos a usar para hacer un script en Python3 que haga fuerza bruta y nos diga cual es la contraseña usando diferentes tokens y ganar acceso al servicio ademas nos aprovecharemos de la version qdPM 9.1 para tener una reverse shell y para la escalada de privilegios tendremos que usar una clave ssh para ganar acceso como otro usuario y abusar de un privilegio de sudoers para ser root"
 date: 2023-03-18
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-cheesjack/icon.png
   teaser_home_page: true

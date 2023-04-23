@@ -4,6 +4,9 @@ title: Tomato 1 - VulnHub
 excerpt: "La maquina Tomato 1 de la plataforma de Vulnhub es una maquina linux donde tendremos que aplicar fuzzing para descubrir rutas de la maquina y poder aprovecharnos de un LFI para poder enumerar el sistema y convertir el LFI a un RCE atraves de 2 formas que son un Log Poisoning envenando los Logs y la otra abusando de los php filters chain y para la escalada de privilegios vamos a abusar de la version del kernel de la maquina para ser root"
 date: 2023-03-03
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-tomato1/logo.png
   teaser_home_page: true

@@ -4,6 +4,9 @@ title: Mr Robot - TryHackMe
 excerpt: "Mr Robot is a quick and fun Medium CTF for beginners where we have to use a dictionary to find the password and log in to the service with a character of Mr Robot after that we have to modify the 404 template to win access to the machine for root we will abuse SUID privileges"
 date: 2023-02-07
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-mrrobot/icon.jpg
   teaser_home_page: true

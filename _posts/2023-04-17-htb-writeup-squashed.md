@@ -4,6 +4,9 @@ title: Squashed - Hack The Box
 excerpt: "En este post estaremos resolviendo la maquina Squashed de la plataforma de Hackthebox que es de dificultad facil donde tendremos que enumerar el servicio NFS de la maquina para poder hacer una montura de los recursos que comparte y asi poder crear una webshell para ganar acceso como el usuario alex para ser root tendremos que abusar del archivo .Xauthority para poder tomar una captura de pantalla donde podremos ver la contraseña del usuario root gracias a que el usuario esta corriendo un gestor de contraseñas en tiempo real"
 date: 2023-04-17
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/htb-writeup-squashed/icon.png
   teaser_home_page: true

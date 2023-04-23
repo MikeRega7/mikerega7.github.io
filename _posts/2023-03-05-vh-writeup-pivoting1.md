@@ -4,6 +4,9 @@ title: Symfonos 1 y Symfonos 2 - VulnHub
 excerpt: "En esta ocasion estaremos realizando un pequeño laboratorio de pivoting en donde de primeras solo tenemos conectividad con la maquina Symfonos 1 y tenemos que comprometerla para alcanzar la segunda que es la symfonos 2 tendremos que hacer pivoting para realizar la enumeracion desde nuestra maquina de atacante donde tendremos que hacer scrips en bash para ver puertos abiertos usar chisel, proxychains, socks entre otras ya que configuramos una red interna para el pivoting ala maquina Symfonos 2"
 date: 2023-03-05
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-pivoting1/logo.png
   teaser_home_page: true
@@ -1074,7 +1077,7 @@ Agregar esto al archivo para poder usar `proxychains` el puerto nos lo indica `c
 socks5 127.0.0.1 1080
 ```
 
-## PortScan
+## PortScan Symfonos 2
 
 ```bash
 ❯ proxychains nmap --top-ports 500 --open -T5 -v -n 10.10.0.128 -sT -Pn 2>&1 | grep -vE "timeout|OK"
@@ -1836,6 +1839,8 @@ Una vez creado vamos a darle en capture despues de SNMP y run
 
 ![](/assets/images/vh-writeup-pivoting1/Web13.png)
 
+## Shell cronus 
+
 ```bash
 ❯ nc -nlvp 4646
 listening on [any] 4646 ...
@@ -1868,6 +1873,7 @@ User cronus may run the following commands on symfonos2:
     (root) NOPASSWD: /usr/bin/mysql
 cronus@symfonos2:/opt/librenms/html$ 
 ```
+## Escalada de privilegios Symfonos2 
 
 <https://gtfobins.github.io/gtfobins/mysql/#sudo>
 

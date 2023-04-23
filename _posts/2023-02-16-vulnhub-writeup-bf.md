@@ -4,6 +4,9 @@ title: Stack Overflows for Begginers - VulnHub
 excerpt: "Tenemos que explotar 5 binarios que son todos los que te ofrece la maquina van por niveles en total son 5 los binarios que se tienen que explotar para esto vamos a utilizar gdb con peda instalado y ghidra para decompilar el codigo vamos a estar usando algunas tecnicas conocidas este es reto para las personas interesadas en aprender sobre BufferOverflow es por eso que se llama for Begginers"
 date: 2023-02-09
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-bf/template.png
   teaser_home_page: true

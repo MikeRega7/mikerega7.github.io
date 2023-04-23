@@ -4,6 +4,9 @@ title: BlackMarket - VulnHub
 excerpt: "La maquina BlackMarket: 1 de la plataforma de VulnHub es una maquina linux donde tendremos que crearnos un directorio con contraseñas para hacer fuerza bruta y saber la contraseña de un usuario valido del sistema ademas tendremos que explotar una sqli basada en error manualmente gracias a eso podremos obtener los hashes de los usuarios tendremos que crackearlos tendremos que conectarnos a squirrelmail y abusar de un backdoor creado por un usuario para poder ganar acceso ala maquina y la escalada vamos a abusar de un privilegio a nivel de sudoers"
 date: 2023-04-02
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-blackmarket/logo.png
   teaser_home_page: true

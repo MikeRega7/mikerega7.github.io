@@ -4,6 +4,9 @@ title: Agent Sudo - TryHackMe
 excerpt: "Agent Sudo es un CTF de dificultad facil en el que tendremos que hacer fuerza bruta para poder saber la contraseña de un usuario de la maquina y poder acceder al servicio ftp ademas tendremos que usar el User-Agent para poder enumerar bien y encontrar mucha informacion util ya que esto nos permitira encontrar mas pistas para avanzar y poder comprometer la maquina para ser root es facil en el CTF nos dicen que tenemos que revelar la verdad"
 date: 2023-02-18
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-agentsudo/agentsudo.jpeg
   teaser_home_page: true

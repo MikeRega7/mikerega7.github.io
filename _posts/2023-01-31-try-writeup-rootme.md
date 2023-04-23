@@ -4,6 +4,9 @@ title: RootMe - TryHackMe
 excerpt: "RootMe is a quick and fun easy CTF for beginners where we have to upload a php file to receive a reverse shell and use python to be root"
 date: 2023-01-31
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-rootme/icon.png
   teaser_home_page: true

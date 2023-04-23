@@ -4,6 +4,9 @@ title: BoredHackerBlog Cloud AV - VulnHub
 excerpt: "La maquina BoredHackerBlog Cloud AV esta catalogada como facil es una maquina linux donde tendremos que explotar una SQLite Boolean Blind Based Injection para poder obtener los codigos de invitacion para poder acceder ala maquina para la escalada de privilegios tendremos que abusar de un binario que es SUID para convertirnos en el usario root"
 date: 2023-02-21
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-BoredHB/logo.png
   teaser_home_page: true

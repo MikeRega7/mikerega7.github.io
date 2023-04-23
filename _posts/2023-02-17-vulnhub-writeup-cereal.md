@@ -4,6 +4,9 @@ title: Cereal 1 - VulnHub
 excerpt: "La maquina Cereal: 1 de la plataforma de VulnHub que esta catalogada como Medium es una maquina donde tendremos que aplicar mucho fuzzing para poder descubrir rutas y otro subdominio que tiene la maquina ademas vamos a estar usando los ataques de php deserialization para ganar acceso ala maquina y para convertirnos en el usuario root vamos a estar abusando de una tarea cron"
 date: 2023-02-15
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-cereal/logo.png
   teaser_home_page: true
@@ -658,6 +661,8 @@ Y en burpsuite con la peticion que ya habimos hecho vamos a cambiar el dato por 
 
 ![](/assets/images/vh-writeup-cereal/reverseshellburp.png)
 
+## Shell apache
+
 ```shell
 ❯ sudo nc -nlvp 443
 listening on [any] 443 ...
@@ -775,6 +780,8 @@ bash-4.4$ getcap -r / 2>/dev/null
 /usr/sbin/suexec = cap_setgid,cap_setuid+ep
 bash-4.4$ 
 ```
+
+## Escalada de privilegios
 
 Despues de enumerar el sistema y ver que no hay gran cosa vamos a buscar por tareas cron vamos a usar `pspy`
 

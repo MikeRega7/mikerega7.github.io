@@ -4,6 +4,9 @@ title: Tabby - Hack The Box
 excerpt: "Tabby is fun and easy box where have to abuse of a LFI after that of Tomcat Host manager and create a malicious war also for root abuse of the LXC"
 date: 2023-01-11
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/htb-writeup-tabby/new.png
   teaser_home_page: true
@@ -349,6 +352,8 @@ ash@tabby:/$ id
 uid=1000(ash) gid=1000(ash) groups=1000(ash),4(adm),24(cdrom),30(dip),46(plugdev),116(lxd)
 ```
 
+## Privilege Escalation 
+
 ```bash
 ❯ searchsploit lxd
 ---------------------------------------------------------------------------------------------- ---------------------------------
@@ -462,6 +467,8 @@ ash@tabby:/tmp$ which lxd
 ```
 
 move the files to /dev/shm if you have problems
+
+## Root flag 
 
 ```bash
 ash@tabby:/dev/shm$ ./lxd.sh -f alpine-v3.17-x86_64-20230111_1724.tar.gz 

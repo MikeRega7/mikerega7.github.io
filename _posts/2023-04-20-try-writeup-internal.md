@@ -4,6 +4,9 @@ title: Internal - TryHackMe
 excerpt: "En este Post vamos a estar resolviendo el room Internal de la plataforma de Tryhackme que es dificultad Dificil pero bueno no creo que sea de esa dificultad vamos a estar haciendo fuerza bruta para poder tener contraseñas y poder conectarnos a diferentes gestores de contenido ademas vamos a tener que traernos el puerto 8080 de la maquina ya que estamos en un docker la escalada es lo mas facil de la maquina"
 date: 2023-04-20
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-internal/icon.png
   teaser_home_page: true

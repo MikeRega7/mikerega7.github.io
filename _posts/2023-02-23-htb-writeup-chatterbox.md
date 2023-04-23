@@ -4,6 +4,9 @@ title: Chatterbox - Hack The Box
 excerpt: "Chatterbox is a medium and windows machine where're goint to exploit a buffer overflow to win access to the machine also we're going to use Icacls to see the root flag, this machine has another way to be solved but I will show the quickest way to solve it "
 date: 2023-01-23
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/htb-writeup-chatterbox/new.png
   teaser_home_page: true

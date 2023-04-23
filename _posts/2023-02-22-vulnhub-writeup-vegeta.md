@@ -4,6 +4,9 @@ title: Vegeta 1 - VulnHub
 excerpt: "La maquina Vegeta 1 de la plataforma de VulnHub esta catalogada como facil ya que en realidad es un CTF sencillo donde vamos a tener que decodificar una cadena en base64 para poder obtener un QR al igual que tendremos que hacer fuzzing para poder descubrir una ruta de la maquina que contiene un audio en codigo morse que tendremos que traducirlo para poder obtener credenciales para conectarnos por ssh y para la escalada de privilegios tendremos que abusar del /etc/passwd ya que tenemos permisos de escritura"
 date: 2023-02-22
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-Vegeta1/logo.png
   teaser_home_page: true

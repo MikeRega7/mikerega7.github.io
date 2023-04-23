@@ -4,6 +4,9 @@ title: Five86 - VulnHub
 excerpt: "En esta ocasion vamos a estar realizando la maquina Five86: 1 de VulnHub en la cual vamos a estar abusando del servicio OpenNetAdmin 18.1.1 para ganar acceso al sistema como www-data de hay vamos a tener que estar migrando a otros usuarios de la maquina crackiando hashes y usando un diccionario que vamos a hacer con crunch y tambien vamos a usar el cp que podemos ejecutarlo como otro usuairo para conectarnos por ssh con la clave id_rsa.pub y para root tendremos que ejecutar un binario SUID que al final nos da una bash como root"
 date: 2023-03-20
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-five86/icon.png
   teaser_home_page: true

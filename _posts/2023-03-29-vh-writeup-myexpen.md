@@ -4,6 +4,9 @@ title: MyExpensive 1 - VulnHub
 excerpt: "En este post vamos a estar realizando una maquina linux de la plataforma de VulnHub donde tenemos que recuperar €750 de un usuario llamado Samuel que fue despedido de la compañia donde trabajaba y tenemos que aprovercharnos de un XSS tambien es vulnerable a SQL Injection ademas vamos con el XSS y un CSRF vamos a hacer un Cookie Hijacking para estar convirtiendonos en otros usuarios con mas privilegios y al final llegar a enviarnos nuestro dinero de vuelta"
 date: 2023-03-29
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-myexpen/icon.png
   teaser_home_page: true

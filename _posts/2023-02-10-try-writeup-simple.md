@@ -4,6 +4,9 @@ title: Simple CTF - TryHackMe
 excerpt: "En este CTF que es para beginners de dificultad facil para a estar explotanto una vulnerabilidad de un servicio que corre la maquina que es vulnerable a SQLI ademas tendremos que aprovecharnos de que podemos correr un comando como root y asi poder convertirnos en ese usuario"
 date: 2023-02-10
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-simple/logo.png
   teaser_home_page: true

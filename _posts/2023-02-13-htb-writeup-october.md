@@ -4,6 +4,9 @@ title: October - Hack The Box
 excerpt: "October is a fun medium linux box where're going to upload a php5 reverse shell to win access and to be root we have to exploit a Buffer Overflow."
 date: 2023-01-13
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/htb-writeup-october/new.png
   teaser_home_page: true

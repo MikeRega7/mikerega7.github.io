@@ -4,6 +4,9 @@ title: Loly 1 - VulnHub
 excerpt: "La maquina Loly: 1 de la plataforma de Vulnhub es de dificultad facil donde tendremos que abusar de xmlrpc.php para poder obtener las credenciales de un usuario y despues de eso nos conectaremos al wordpress que usa la maquina para ganar acceso al sistema tendremos que abusar de una parte del wordpress en la que nos deja subir archivos AdRotate Manage Media al ganar acceso podremos ver las credenciales de un usuario y podremos migrar y para convertirnos en root tendremos que abusar de la version del kernel"
 date: 2023-03-14
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-loly/icon2.png
   teaser_home_page: true

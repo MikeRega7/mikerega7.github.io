@@ -4,6 +4,9 @@ title: Investigating Windows - TryHackMe
 excerpt: "Este CTF es un poco diferente es de la plataforma de Tryhackme y es de dificultad facil es una maquina windows este CTF es mas de Analisis Forense ya que tenemos que encontrar rastros para saber que es lo que pudo hacer el hacker para comprometer la maquina ademas nos dicen que tenemos que conectarnos por RDP y nos dan credenciales tenemos que basicamente investigar el sistema windows para poder contestar las preguntas"
 date: 2023-03-15
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-inwin/icon.png
   teaser_home_page: true

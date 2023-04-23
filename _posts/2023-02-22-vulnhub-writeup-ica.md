@@ -4,6 +4,9 @@ title: ICA 1 - VulnHub
 excerpt: "La maquina ICA: 1 de la plataforma de VulnHub esta catalogada como facil vamos a estar abusando de una vulnerabilidad en el service qdPM que corre la maquina para obtener credenciales y conectarnos al servico Mysql y poder tener el nombre de todos los usuarios y contraseñas para conectarnos por ssh y ganar acceso para la escalada de privilegios tendremos que abusar de un binario que es SUID"
 date: 2023-02-22
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-ica1/logo.png
   teaser_home_page: true

@@ -4,6 +4,9 @@ title: Aqua 1 - VulnHub
 excerpt: "La maquina Aqua 1 de la plataforma de VulnHub es una muy buena maquina si es que nunca has explotado un LFI tendremos que abusar del LFI para poder ver un archivo para hacer Port knocking para abrir el puerto 21 donde vamos a conectarnos al servicio FTP para obtener informacion y subir un archivo .php para ganar acceso al sistema en la escalada de privilegios hay 2 formas de llegar a ser root"
 date: 2023-02-25
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-acua/logo2.png
   teaser_home_page: true

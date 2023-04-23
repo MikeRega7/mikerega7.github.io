@@ -4,6 +4,9 @@ title: Pickle Rick - TryHackMe
 excerpt: "Pickle Rick es un CTF de la plataforma de Tryhackme de dificultad muy facil es una maquina linux donde tendremos que encontrar 3 ingredientes para que Rick pueda hacer su posion para transformarse de vuelta a un humano las credenciales para conectarnos por un panel de login no las daran mientras enumeramos la maquina al final tendremos que leer los ingredientes en un apartado de la web donde podemos ejecutar comandos, en la maquina victima intente enviarme una reverse shell pero esta bloqueado el comando"
 date: 2023-03-03
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-rickm/logo.png
   teaser_home_page: true

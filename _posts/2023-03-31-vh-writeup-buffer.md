@@ -4,6 +4,9 @@ title: BufferEMR - VulnHub
 excerpt: "La maquina BufferEMR de la plataforma de VulnHub es una maquina linux donde tendremos que explotar un binario de 32 bytes que es la parte de Buffer Overflow ademas tendremos que aprovecharnos del servicio OpenEMR que su version es vulnerable y asi podremos ganar acceso ala maquina"
 date: 2023-03-31
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-buffemr/icon.png
   teaser_home_page: true

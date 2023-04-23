@@ -4,6 +4,9 @@ title: Photobomb - Hack The Box
 excerpt: "Photobomb es una maquina de dificultad facil donde en el propio codigo de la pagina web hay un archivo JS donde obtenemos el nombre de usuario y su contraseña para acceder a una ruta en la cual no teniamos acceso despues abusamos del parametro filetype para obtener una reverse shell y para la escalada de privilegios vamos a usar un path traverse para obtener una shell como root"
 date: 2023-02-18
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/htb-writeup-photobomb/new.png
   teaser_home_page: true

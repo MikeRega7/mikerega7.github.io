@@ -4,6 +4,9 @@ title: Blue - TryHackMe
 excerpt: "En esta ocasion estaremos resolviendo una maquina windows 7 donde tendremos que explotar una vulnerabilidad muy conocida que es el EternalBlue donde tendremos que usar nmap para detectar que es vulnerable y ademas vamos a usar metasploit ya que en el room nos piden usarlo para poder aprender y practicar a usar esta herramienta"
 date: 2023-03-24
 classes: wide
+toc: true
+toc_label: "Contenido"
+toc_icon: "fire"
 header:
   teaser: /assets/images/try-writeup-blue/icon.png
   teaser_home_page: true

@@ -4,6 +4,9 @@ title: Solstice y Joestar - VulnHub
 excerpt: "En este vamos a estar haciendo un laboratorio de pivoting para practicar vamos a estar resolviendo las masquinas solstice y joestar que solomente de primeras solo tenemos conexion con una sola la maquina y tenemos que comprometer una para tener conexion con la otra una de las maquinas simula un deposito de gas tendremos que explotar un LFI y gracias a eso haremos un Log Poisoning para ganar acceso tendremos que usar chisel y proxychains entre otras cosas para poder comprometer Joestar que la maquina es algo rara pero muy buena"
 date: 2023-04-03
 classes: wide
+toc: true
+toc_label: "Contenidos"
+toc_icon: "fire"
 header:
   teaser: /assets/images/vh-writeup-pivoting2/icon.png
   teaser_home_page: true
@@ -882,6 +885,8 @@ socks5 127.0.0.1 1080
 
 Ahora tenemos que usar `proxychains` para pasar por el tunel
 
+## PortScan Joestar
+
 ```bash
 ❯ proxychains nmap -sT -Pn --open -T5 -v -n 10.10.0.129 2>/dev/null
 ProxyChains-3.1 (http://proxychains.sf.net)
@@ -907,6 +912,8 @@ PORT      STATE SERVICE
 10001/tcp open  scp-config
 
 ```
+
+## Enumeracion Joestar 
 
 Tenemos el puerto 80 abierto pero vamos a usar `foxyproxy` para pasar por el tunel
 
@@ -1095,6 +1102,8 @@ bash: no job control in this shell
 joestar@tank1:/$ 
 ```
 
+## Shell joestar 
+
 Y pues haces lo mismo para que sea una consola interactiva copea tu clave id_rsa.pub y metela como `authorized_keys` por que la maquina se crashea rapido (no alcanze a copear el comando para mostrarlo pero es la misma historia) es que la maquina corrompe muy rapido
 
 ```bash
@@ -1134,7 +1143,7 @@ joestar@tank1:~$ hostname -I
 joestar@tank1:~$ 
 ```
 
-## Escalada de privilegios
+## Escalada de privilegios Joestar
 
 Estamos en el grupo `lxd`
 
