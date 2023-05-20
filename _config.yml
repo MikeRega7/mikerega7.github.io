@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", 
 locale                   : "México"
 title                    : "mikerega7.io"
 title_separator          : "-"
-name                     : "Miguelrega7"
+name                     : "MiguelRega7"
 description              : "Posts about security and CTFs"
 url                      : "https://mikerega7.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -101,7 +101,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Miguelrega7"
+  name             : "MiguelRega7"
   avatar           : "/assets/images/avatar2.png"
   bio              : "Cybersecurity and CTF player"
   location         : "México"

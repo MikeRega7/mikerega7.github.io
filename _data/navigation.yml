@@ -7,7 +7,7 @@ main:
     url: /categories/
   - title: "Tags"
     url: /tags/
-  - title: "About"
+  - title: "&#128100;"
     url: /about/
   - title: "&#128269;"
     url: /search/
