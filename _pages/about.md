@@ -12,6 +12,7 @@ Estas son las certificaciones que planeo obtener a lo largo de mi carrera:
 
 - eJPTv2 (eLearnSecurity Junior Penetration Tester)
 - eCPPTv2 (eLearnSecurity Professional Penetration Tester)
+- OSWP (Offensive Security Wireless Professional)
 - OSCP (Offensive Security Certified Professional)
 
 ## Contacto 
