@@ -171,7 +171,7 @@ Ahora vamos a dumpear las columnas para la tabla **users** y para la base de dat
 
 Si aplicamos la `query` vemos las columnas existentes
 
-![](/assets/images/ports-writeup-sqli/25.png)
+![](/assets/images/ports-writeup-sqli/web25.png)
 
 Después de probar varias querys esta fue la única que me funciono `' union select NULL,username||':'||password from users-- -`
 
