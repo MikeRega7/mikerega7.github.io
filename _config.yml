@@ -130,8 +130,8 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : https://www.youtube.com/@mikerega7724
-  rumble           : https://rumble.com/user/MiguelRega7
+  youtube          : "https://www.youtube.com/@mikerega7724"
+  HackTheBox       : "https://app.hackthebox.com/profile/910232"
 
 # Reading Files
 include:

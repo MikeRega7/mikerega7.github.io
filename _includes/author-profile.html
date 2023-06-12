@@ -265,6 +265,22 @@
         </li>
       {% endif %}
 
+	       {% if author.HackTheBox %}
+        <li>
+          <a href="{{ author.HackTheBox }}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <img style="width: 17px; height:  17px;" alt="HackTheBox" src="/assets/images/hackthebox.webp"/> HackTheBox
+          </a>
+        </li>
+      {% endif %}
+      
+      {% if author.HackTheBox %}
+        <li>
+          <a href="{{}}" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <img style="width: 200px; height:  65px;" alt="" src="http://www.hackthebox.com/badge/image/910232"/> 
+          </a>
+        </li>
+      {% endif %}
+	  
       {% include author-profile-custom-links.html %}
     </ul>
   </div>
