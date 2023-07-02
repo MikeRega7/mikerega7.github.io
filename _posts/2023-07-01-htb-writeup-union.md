@@ -22,7 +22,7 @@ tags:
 
 ⮕ Maquina Linux
 
-```python
+```powershell
 ❯ ping -c 1 10.10.11.128
 PING 10.10.11.128 (10.10.11.128) 56(84) bytes of data.
 64 bytes from 10.10.11.128: icmp_seq=1 ttl=63 time=96.7 ms
