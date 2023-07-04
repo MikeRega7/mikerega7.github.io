@@ -13,7 +13,6 @@ header:
   icon: /assets/images/tryhackme.webp
 categories:
   - TryHackMe
-  - infosec
 tags:  
   - SweetRice CMS 1.5.1
   - Sudoers Privilege

@@ -13,8 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
-  - Spanish
 tags:  
   - OpenNetAdmin 18.1.1
   - Custom dictionary with cruch

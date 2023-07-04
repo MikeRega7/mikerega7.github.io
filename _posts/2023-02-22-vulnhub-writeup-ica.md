@@ -13,8 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
-  - Spanish
 tags:  
   - qdPM 9.2
   - MYSQL Service

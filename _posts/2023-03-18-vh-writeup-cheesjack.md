@@ -13,8 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
-  - Spanish
 tags:  
   - NFS Enumeration
   - Custom dictionary with cewl

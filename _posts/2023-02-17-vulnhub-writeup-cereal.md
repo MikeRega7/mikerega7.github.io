@@ -13,8 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
-  - Spanish
 tags:  
   - Subdomain Enumeration
   - Cron Job

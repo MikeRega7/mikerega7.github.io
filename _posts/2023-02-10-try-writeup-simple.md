@@ -13,7 +13,6 @@ header:
   icon: /assets/images/tryhackme.webp
 categories:
   - TryHackMe
-  - infosec
 tags:  
   - SQLI
   - Cracking Hashes

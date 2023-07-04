@@ -8,12 +8,11 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/try-writeup-rootme/icon.png
+  teaser: /assets/images/try-writeup-rootme/iconxd.png
   teaser_home_page: true
   icon: /assets/images/tryhackme.webp
 categories:
   - TryHackme
-  - infosec
 tags:  
   - SUID
   - PHP

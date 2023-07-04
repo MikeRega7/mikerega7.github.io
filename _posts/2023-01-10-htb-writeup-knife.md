@@ -13,7 +13,6 @@ header:
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
-  - infosec
 tags:  
   - PHP 8.1.0-dev - 'User-Agent' [RCE]
   - Abusing Sudoers Privilege (Knife Binary) [Privilege Escalation]

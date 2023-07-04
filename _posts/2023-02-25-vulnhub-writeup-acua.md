@@ -13,8 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
-  - Spanish
 tags:  
   - LFI
   - Buffer Overflow
@@ -630,7 +628,7 @@ Non-debugging symbols:
 gdb-peda$ 
 ```
 
-Recordar `GatoGamer1155` explica y tiene mejor dominio en esto del `Buffer Overflow` pueden ver su `writeup` para entender mejor esta parte igual gracias por su ayuda <https://gatogamer1155.github.io/vulnhub/aqua/> 
+Recordar `GatoGamer1155` explica y tiene mejor dominio en esto del `Buffer Overflow` pueden ver su `writeup` para entender mejor esta parte igual gracias por su ayuda <https://gatogamer1155.github.io> 
 
 Yo no eh explotada mucho `Buffer overflow` solo en algunos casos pero si complete la maquina de la primer forma xd
 

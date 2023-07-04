@@ -8,12 +8,11 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/try-writeup-agentsudo/agentsudo.jpeg
+  teaser: /assets/images/try-writeup-agentsudo/iconxd.png
   teaser_home_page: true
   icon: /assets/images/tryhackme.webp
 categories:
   - TryHackMe
-  - infosec
 tags:  
   - User-Agent
   - CVE-2019-14287

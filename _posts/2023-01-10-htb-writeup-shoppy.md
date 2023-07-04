@@ -13,7 +13,6 @@ header:
   icon: /assets/images/hackthebox.webp
 categories:
   - hackthebox
-  - infosec
 tags:  
   - Sqli
   - Docker

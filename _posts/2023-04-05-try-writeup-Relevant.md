@@ -8,12 +8,11 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/try-writeup-relevant/icon.png
+  teaser: /assets/images/try-writeup-relevant/iconxd.jpeg
   teaser_home_page: true
   icon: /assets/images/tryhackme.webp
 categories:
   - TryHackMe
-  - infosec
 tags:  
   - SMB Enumeration
   - Windows Privilege Escalation

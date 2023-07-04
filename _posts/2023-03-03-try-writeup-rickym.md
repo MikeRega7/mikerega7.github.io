@@ -8,12 +8,11 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/try-writeup-rickm/logo.png
+  teaser: /assets/images/try-writeup-rickm/iconxd.jpeg
   teaser_home_page: true
   icon: /assets/images/tryhackme.webp
 categories:
   - Tryhackme
-  - infosec
 tags:  
   - Linux enumeration
   - Fuzzing

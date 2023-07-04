@@ -13,8 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
-  - Spanish
 tags:  
   - XSS (Cross-Site Scripting)
   - CSRF (Cross-Site Request Forgery)

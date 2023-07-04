@@ -8,12 +8,11 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/try-writeup-mrrobot/icon.jpg
+  teaser: /assets/images/try-writeup-mrrobot/iconxd.jpeg
   teaser_home_page: true
   icon: /assets/images/tryhackme.webp
 categories:
   - TryHackMe
-  - infosec
 tags:  
   - Brute Force
   - WordPress

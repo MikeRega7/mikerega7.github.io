@@ -13,7 +13,6 @@ header:
   icon: /assets/images/vulnhub.webp
 categories:
   - VulnHub
-  - infosec
 tags:  
   - Wordpress Enumeration
   - Abusing xmlrpc.php
