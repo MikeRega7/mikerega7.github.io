@@ -521,7 +521,7 @@ afbc5bd4b615a60648cec41c6ac92530
 C:\Users\Administrator\Desktop> 
 ```
 
-## Shell as root || second way 
+## Shell as root second way
 
 Si vemos los privilegios del usuario vemos que forma parte del grupo `SeImpersonatePrivilege` podemos usar el **JuicyPotato**
 
