@@ -10,9 +10,9 @@ Hola me llamo Miguel estoy aprendiendo **Pentesting** me gusta resolver CTFs de 
 
 Estas son las certificaciones que planeo obtener a lo largo de mi carrera:
 
-- ![](https://checkout.ine.com/img/ejpt_badge_glass.acace681.png){: .align-left width="42" height="42"} eJPTv2 (eLearnSecurity Junior Penetration Tester)
+- ![](https://checkout.ine.com/img/ejpt_badge_glass.acace681.png){: .align-left width="43" height="43"} eJPTv2 (eLearnSecurity Junior Penetration Tester)
 
-- ![](https://elearnsecurity.com/wp-content/uploads/certificate-09.png){: .align-left width="40" height="40"} eCPPTv2 (eLearnSecurity Professional Penetration Tester)
+- ![](https://elearnsecurity.com/wp-content/uploads/eCPPTv2.png){: .align-left width="45" height="45"} eCPPTv2 (eLearnSecurity Professional Penetration Tester)
 
 - ![](https://images.credly.com/images/8e66b341-8fa9-43ff-a611-76b72a65b38f/image.png){: .align-left width="40" height="40"} OSWP (Offensive Security Wireless Professional)
 
