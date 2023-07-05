@@ -159,7 +159,7 @@ Algo que podemos hacer es cambiar como se va a tramitar la petición en vez de `
 
 ![](/assets/images/htb-writeup-ransom/web5.png)
 
-Bueno ahora algo que podemos hacer es cambiar la petición a `GET` pero manualmente ya que nos da un código de estado `405` entonces donde dice **GET** lo cambiaremos manualmente por **POST**
+Bueno ahora algo que podemos hacer es cambiar la petición a `GET` pero manualmente ya que nos da un código de estado `405` entonces donde dice **POST** lo cambiaremos manualmente por **GET**
 
 Si enviamos la petición y la vemos el **Content-Type** es `JSON`
 
