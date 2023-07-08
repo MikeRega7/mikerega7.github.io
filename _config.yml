@@ -15,14 +15,14 @@ remote_theme             : "mmistakes/minimal-mistakes@4.15.1"
 minimal_mistakes_skin    : "haxor" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "México"
-title                    : "mikerega7.io"
+locale                   : "España"
+title                    : "fiaxen.io"
 title_separator          : "-"
-name                     : "MiguelRega7"
-description              : "Posts about security and CTFs"
+name                     : "FiAXEN"
+description              : "Posts about cibersecurity, development tools and programs "
 url                      : "https://mikerega7.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "MikeRega7/mikerega7.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "F1AXEN/fiaxen.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 logo                     : #"/assets/images/masthead.png"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs              : true # true, false (default)
@@ -101,10 +101,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "MiguelRega7"
-  avatar           : "/assets/images/avatar3.png"
-  bio              : "Cybersecurity and CTF player"
-  location         : "México"
+  name             : "FiAXEN"
+  avatar           : "/assets/images/logo.png"
+  bio              : "Pentester Jr, Developer Jr   /eJPT/eCCPTv2/eWPTX     | OSCP soon |"
+  location         : #"México"
   email            : # n
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
@@ -114,7 +114,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "MikeRega7"
+  github           : "F1AXEN"
   gitlab           :
   google_plus      :
   keybase          : # "m"
@@ -126,12 +126,12 @@ author:
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          :  "MiguelJmrn7"
+  twitter          :  "FiAX3N"
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/@mikerega7724"
-  HackTheBox       : "https://app.hackthebox.com/profile/910232"
+  youtube          : #"https://www.youtube.com/@mikerega7724"
+  HackTheBox       : #"https://app.hackthebox.com/profile/910232"
 
 # Reading Files
 include:
