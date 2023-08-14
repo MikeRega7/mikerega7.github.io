@@ -67,4 +67,4 @@ tags:
 
 * Y pues no se que mas decir como tal practica mucho y haslo :). 
 
-* Quiero agradecer a toda la comunidad **Hack4u** de **s4vitar** ademas ala comunidad de [raptorattack](https://www.youtube.com/@aprendiendohacking), al igual que al team al que pertenesco **Cy3rGh0st** y finalmente a [GatoGamer](https://gatogamer1155.github.io/) sin ellos nada de esto seria posible ya que son buenas personas que apoyan y te ayudan con muchas cosas donde tienes dudas gracias a todos :) vamos a por la siguiente certificacion.
+* Quiero agradecer a toda la comunidad **Hack4u** de **s4vitar** ademas ala comunidad de [raptorattack](https://www.youtube.com/@aprendiendohacking), al igual que al team al que pertenesco **Cyb3rGh0st** y finalmente a [GatoGamer](https://gatogamer1155.github.io/) sin ellos nada de esto seria posible ya que son buenas personas que apoyan y te ayudan con muchas cosas donde tienes dudas gracias a todos :) vamos a por la siguiente certificacion.
