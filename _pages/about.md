@@ -6,7 +6,7 @@ author_profile: true
 
 <br>
 
-Hola me llamo Miguel estoy aprendiendo **Pentesting** me gusta resolver CTFs de varias plataformas ademas actualmente me estoy preparando para presentar el [eJPTv2 de eLearn Security](https://ine.com/learning/certifications/internal/elearnsecurity-junior-penetration-tester-cert) como mi primer certificacion 
+Hola me llamo Miguel estoy aprendiendo **Pentesting** me gusta resolver CTFs de varias plataformas ademas actualmente me estoy preparando para presentar el [eCPPTv2 de eLearn Security](https://elearnsecurity.com/product/ecpptv2-certification/) 
 
 Estas son las certificaciones que planeo obtener a lo largo de mi carrera:
 
