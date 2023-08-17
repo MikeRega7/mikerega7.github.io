@@ -58,6 +58,7 @@ tags:
 * **xfreerdp** para conectarte de manera remota con interfaz grafica a una maquina **Windows** contando con credenciales validas **esta herramienta es importante**
 * **smbmap o smblcient** para enumerar recursos compartidos a nivel de red 
 * **fping** para descubrir los **hosts** activos en tu **red** es importante contar con conocimientos de **subnetting**
+* **msfvenom** para crear el ejecutable y ganar accceso con meterpreter
 
 ## Cosas importantes y consejos
 

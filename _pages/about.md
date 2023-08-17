@@ -6,7 +6,7 @@ author_profile: true
 
 <br>
 
-Hola me llamo Miguel estoy aprendiendo **Pentesting** me gusta resolver CTFs de varias plataformas ademas actualmente me estoy preparando para presentar el [eCPPTv2 de eLearn Security](https://elearnsecurity.com/product/ecpptv2-certification/) 
+Hola me llamo Miguel estoy aprendiendo **Pentesting** me gusta resolver CTFs de varias plataformas ademas actualmente me estoy preparando para presentar el [OSWP (Offensive Security Wireless Professional)](https://help.offsec.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide) 
 
 Estas son las certificaciones que planeo obtener a lo largo de mi carrera:
 
