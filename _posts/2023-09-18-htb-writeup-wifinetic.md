@@ -876,3 +876,7 @@ BSSID               Ch  dBm  WPS  Lck  Vendor    ESSID
 ^C
 root@wifinetic:~# 
 ```
+
+## Flagspwn
+
+He desarrollado este pequeño script para mostrar rapidamente las flags en python3 te dejo el link aqui <https://github.com/MikeRega7/Scripts/tree/main/HackTheBox/Wifinetick>
