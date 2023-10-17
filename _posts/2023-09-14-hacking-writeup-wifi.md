@@ -2,7 +2,7 @@
 layout: single
 title: Hacking Wifi WPA2 
 excerpt: "En este post vamos a estar haciendo algunos ataques conocidos para el protocolo WPA2 para prepararnos para el OSWP vamos a estarnos montando un AP desde nuestro dispositivo movil para asociar clientes y empezar con los ataques a este protocolo"
-date: 2023-09-14
+date: 2023-10-17
 classes: wide
 toc: true
 toc_label: "Contenido"
