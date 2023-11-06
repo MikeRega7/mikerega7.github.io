@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Evil Twin Attack with Evil Trust
-excerpt: "En este post vamos a estar realizando el ataque Evil Twin Attack para obtener las credenciales de alguna red social como facebook a travez de este ataque vamos a estar empleando la herramienta la s4vitar mas conocida como evil trust"
+excerpt: "En este post vamos a estar realizando el ataque Evil Twin Attack para obtener las credenciales de alguna red social como facebook a travez de este ataque vamos a estar empleando la herramienta de s4vitar mas conocida como evil trust"
 date: 2023-11-05
 classes: wide
 toc: true
