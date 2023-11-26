@@ -2,7 +2,7 @@
 layout: single
 title: Pilgrimage - Hack The Box
 excerpt: "En este Post vamos a estar resolviendo la maquina Pilgrimage de la plataforma de Hackthebox donde vamos a estar explotando 2 CVEs uno para la intrusion y otro para la escalada de privilegios donde nos aprovecharemos de una tarea cron y todo el tiempo nos aprovecharemos de las imagenes para conseguir lo que queremos"
-date: 2023-10-26
+date: 2023-11-26
 classes: wide
 toc: true
 toc_label: "Contenido"
