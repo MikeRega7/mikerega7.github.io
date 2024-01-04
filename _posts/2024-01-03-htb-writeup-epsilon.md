@@ -2,7 +2,7 @@
 layout: single
 title: Epsilon - Hack The Box
 excerpt: "En este post vamos a estar resolviendo la maquina Epsilon de Hackthebox donde mediante un .git expuesto en el servicio web vamos a poner enumerar y encontrar credenciales de AWS que estan leaked y gracias a eso podremos descargar el AWS Lambda function code hay dentro encontraremos un secret key para poder construir la cookie ya que emplea JWS y la necesitamos para ganar acceso ala web page para el foothold explotaremos un Server Side Templeate Injection para ganar acceso ala maquina para la escalada de privilegios nos aprovecharemos de una tarea cron para crear de un enlace simbolico donde emplea tar para conseguir la id_rsa del usuario root y asi conectarnos por SSH"
-date: 2023-01-03
+date: 2024-01-03
 classes: wide
 toc: true
 toc_label: "Contenido"
