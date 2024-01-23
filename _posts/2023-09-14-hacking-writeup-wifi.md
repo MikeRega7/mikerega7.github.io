@@ -2,7 +2,7 @@
 layout: single
 title: Hacking Wifi WPA2 
 excerpt: "En este post vamos a estar haciendo algunos ataques conocidos para el protocolo WPA2 para prepararnos para el OSWP vamos a estarnos montando un AP desde nuestro dispositivo movil para asociar clientes y empezar con los ataques a este protocolo"
-date: 2023-10-17
+date: 2024-01-21
 classes: wide
 toc: true
 toc_label: "Contenido"
@@ -129,7 +129,7 @@ Una ejemplo es este aquí vemos el **OUI** de **Vmware**
 10601 - 00:50:56 - VMware, Inc.
 ```
 
-Podemos asignarnos una dirección **MAC** aleatoria o una en especifica para asignarnos una aleatoria se hace de la siguiente forma
+Podemos asignarnos una dirección **MAC** aleatoria o una en especifica se hace de la siguiente forma
 
 ```bash
 ❯ macchanger -a wlan0mon
@@ -215,18 +215,6 @@ Permanent MAC: 9c:ef:d5:f9:1e:c0 (unknown)
 ```
 
 ## Analizando el entorno
-
-Ahora lo que vamos a hacer es ver las redes inalambricas que están disponibles en el entorno para hacerlo simplemente ejecutamos lo siguiente 
-
-```bash
-❯ airodump-ng wlan0mon
-```
-
-Ahora lo que vamos a hacer es ver las redes inalambricas que están disponibles en el entorno para hacerlo simplemente ejecutamos lo siguiente 
-
-```bash
-❯ airodump-ng wlan0mon
-```
 
 Ahora lo que vamos a hacer es ver las redes inalambricas que están disponibles en el entorno para hacerlo simplemente ejecutamos lo siguiente 
 
