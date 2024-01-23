@@ -2,7 +2,7 @@
 layout: single
 title: WifiChallengeLab v2
 excerpt: "En este post vamos a estar resolviendo algunas challenges del WifiChallengeLab de v2 donde estaremos aprendiendo a usar nuevas herramientas y a explotar APs con WPA3, WEP, WPA2 algo de recoleccion de informacion de MGT y otras mas"
-date: 2023-11-18
+date: 2024-01-20
 classes: wide
 toc: true
 toc_label: "Contenido"
