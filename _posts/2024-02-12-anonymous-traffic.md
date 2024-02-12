@@ -23,7 +23,7 @@ tags:
 - The first thing we are going to do is to update all the repositories.
 
 <p align="center">
-<img src="https://i.imgur.com/JOnIXkB.png"></img>
+<img src="https://i.imgur.com/JOnIXkB.png">
 </p>
 
 - Now we just update.
@@ -153,19 +153,19 @@ Feb 12 10:58:42 miguelos systemd[1]: Finished tor.service - Anonymizing overlay 
 ```
 
 <p align="center">
-<img src="https://i.imgur.com/z7HmjtH.png"></img>
+<img src="https://i.imgur.com/z7HmjtH.png">
 </p>
 
 - If we check that everything is working correctly, we see that we are going through tor.
 
 <p align="center">
-<img src="https://i.imgur.com/6h0oZUK.png"></img>
+<img src="https://i.imgur.com/6h0oZUK.png">
 </p>
 
 - With this we can check that it is not filtering our information.
 
 <p align="center">
-<img src="https://i.imgur.com/QcUO6Qa.png"></img>
+<img src="https://i.imgur.com/QcUO6Qa.png">
 </p>
 
 - We will always go through the tunnel.
@@ -185,7 +185,7 @@ rtt min/avg/max/mdev = 23.598/23.598/23.598/0.000 ms
 >You can use any tool you want but you must go through the tunnel but if you want to use nmap you have to comment out this line.
 
 <p align="center">
-<img src="https://i.imgur.com/2dNQdHk.png"></img>
+<img src="https://i.imgur.com/2dNQdHk.png">
 </p>
 
 - We can scan the site they tell us <https://www.101labs.net/comptia-security/lab-2-nmap/>
