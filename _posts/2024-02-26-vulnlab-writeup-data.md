@@ -8,7 +8,7 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/Data-vulnhub/icon.png
+  teaser: /assets/images/Data-vulnlab/icon.png
   teaser_home_page: true
 categories:
   - Vulnlab
