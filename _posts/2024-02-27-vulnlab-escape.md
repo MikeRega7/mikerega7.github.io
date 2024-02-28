@@ -113,48 +113,35 @@ Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 - En la ruta **C:\Windows\System32** encontramos un ejecutable interesante vamos a descargarlo.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/01.png?raw=true>
-</p
+![](/assets/images/Escape-vulnlab/01.png)
+  
 - No podemos ejecutarlo porque como nos dijo **ChatGPT** el **Windows Kiosk** se configura para que el usuario solo pueda ejecutar algo en específico como vimos que podemos ejecutar **msedge** vamos a cambiarle el nombre al archivo y lo ejecutamos.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/02.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/02.png)
 
 - Funciona.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/03.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/03.png)
 
 - Vamos a usar **Powershell** para poder ejecutar comandos.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/04.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/04.png)
 
 - Si recordamos tenemos un password, pero está encriptada podemos usar lo siguiente <https://www.nirsoft.net/utils/bullets_password_view.html> .
 
 - Una vez descargado lo pasamos a la máquina víctima.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/05.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/05.png)
 
 - En caso de que no se pueda hacemos lo siguiente.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/06.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/06.png)
 
 - Ahora vamos a copear él **.exe** a la carpeta de **_admin** .
 
 - Ahora vamos a ejecutar el **Remote Desktop** para poder ver la contraseña.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/07.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/07.png)
 
 - Ahora vamos a **Manages Profiles** y despues en **Import Profiles**.
 
@@ -166,23 +153,17 @@ PS C:\_admin> copy .\profiles.xml C:\Users\kioskUser0\Downloads\
 
 - Y ahora importamos el **profiles.xml**.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/08.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/08.png)
 
 ## Password
 
 - Ahora, si ejecutamos el `BulletsPassView.exe` desde la consola, tenemos la contraseña:
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/09.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/09.png)
 
 - Vemos que el usuario **admin** es un usuario del sistema.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/10.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/10.png)
 
 - Para convertirnos en ese usuario vamos a usar **Runas.exe** <https://www.jctsoluciones.com.co/uso-del-comando-runas-en-windows/>.
 
@@ -194,15 +175,11 @@ PS C:\_admin> runas /user:admin cmd                                             
 
 - Ahora estamos como ese usuario:
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/11.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/11.png)
 
 - Pero no somos el **administrator** .
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/12.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/12.png)
 
 ## Root.txt
 
@@ -210,12 +187,8 @@ PS C:\_admin> runas /user:admin cmd                                             
 
 - Vamos a ejecutar una **cmd.exe** con privilegios elevados usando **runas**.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/13.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/13.png)
 
 - Y ya podemos ver la flag porque tenemos privilegios máximos.
 
-<p align="center">
-<img src="https://github.com/MikeRega7/mikerega7.github.io/blob/master/assets/images/Escape-vulnlab/14.png?raw=true">
-</p>
+![](/assets/images/Escape-vulnlab/14.png)
