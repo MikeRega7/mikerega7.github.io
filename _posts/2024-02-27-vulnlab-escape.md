@@ -2,7 +2,7 @@
 layout: single
 title: Escape - Vulnlab
 excerpt: "En este post vamos a estar resolviendo la máquina Escape de la plataforma de Vulnlab donde vamos a estar usando xfreerdp para conectarnos al servicio rdp y comenzar a enumerar la máquina la cual vamos a tener que escapar de un Windows Kiosk en el cual solo está configurado para ejecutar el navegador de microsoft además vamos a estar realizando un bypass de UAC de la máquina."
-date: 2023-02-27
+date: 2024-02-27
 classes: wide
 toc: true
 toc_label: "Contenido"
