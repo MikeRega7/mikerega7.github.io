@@ -849,7 +849,7 @@ nt authority\local service
 C:\Windows\system32>
 ```
 
-## Root.txt
+## nt authority system
 
 - Podemos abusar del **SeImpersonatePrivilege** usando el <https://github.com/antonioCoco/JuicyPotatoNG/releases/tag/v1.1> o con **metasploit** <https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/juicypotato> .
 
