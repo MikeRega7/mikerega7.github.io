@@ -963,7 +963,7 @@ meterpreter >
 
 - Ahora vemos la flag.
 
-<p aling="center">
+<p align="center">
 <img src="https://i.imgur.com/fObra6i.png">
 </p>
 
