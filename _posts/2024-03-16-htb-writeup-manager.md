@@ -2,7 +2,7 @@
 layout: single
 title: Manager - Hack The Box
 excerpt: "Manager es una máquina Windows de dificultad media que alberga un entorno de Active Directory con AD CS (Active Directory Certificate Services), un servidor web y un servidor SQL. El punto de entrada implica enumerar usuarios utilizando RID cycling y realizar un ataque de contraseña para acceder al servicio MSSQL. Luego, se utiliza el procedimiento xp_dirtree para explorar el sistema de archivos, descubriendo una copia de seguridad del sitio web en la raíz del servidor web. Extrayendo la copia de seguridad se revelan credenciales que se reutilizan para conectarse a través de WinRM al servidor. Finalmente, el atacante escala privilegios a través de AD CS mediante la explotación de ESC7."
-date: 2023-03-16
+date: 2024-03-16
 classes: wide
 toc: true
 toc_label: "Contenido"
