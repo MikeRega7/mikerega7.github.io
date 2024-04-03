@@ -4,6 +4,10 @@ permalink: /about/
 author_profile: true
 ---
 
+<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287836250135686"
+     crossorigin="anonymous"></script></head>
+
+
 <br>
 
 Hola me llamo Miguel estoy aprendiendo **Pentesting** me gusta resolver CTFs de varias plataformas ademas actualmente me estoy preparando para presentar el [OSWP (Offensive Security Wireless Professional)](https://help.offsec.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide) 
