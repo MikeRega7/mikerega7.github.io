@@ -4,9 +4,7 @@ permalink: /about/
 author_profile: true
 ---
 
-<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8287836250135686"
-     crossorigin="anonymous"></script></head>
-
+<head><meta name="google-adsense-account" content="ca-pub-8287836250135686"></head>
 
 <br>
 
