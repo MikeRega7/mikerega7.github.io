@@ -217,38 +217,6 @@ smb: \>
 
 - Se conecta a una base de datos `SQL Server` y nos comparten credenciales además de leer el contenido de la tabla `volume`.
 
-```bash
-Rem Attribute VBA_ModuleType=VBADocumentModule
-Option VBASupport 1
-
-' macro to pull data for client volume reports
-'
-' further testing required
-
-Private Sub Connect()
-
-Dim conn As ADODB.Connection
-Dim rs As ADODB.Recordset
-
-Set conn = New ADODB.Connection
-conn.ConnectionString = "Driver={SQL Server};Server=QUERIER;Trusted_Connection=no;Database=volume;Uid=reporting;Pwd=PcwTWTHRwryjc$c6"
-conn.ConnectionTimeout = 10
-conn.Open
-
-If conn.State = adStateOpen Then
-
-  ' MsgBox "connection successful"
- 
-  'Set rs = conn.Execute("SELECT * @@version;")
-  Set rs = conn.Execute("SELECT * FROM volume;")
-  Sheets(1).Range("A1").CopyFromRecordset rs
-  rs.Close
-
-End If
-
-End Sub
-```
-
 
 | Usuario   | Contraseña       |
 | --------- | ---------------- |
