@@ -217,7 +217,7 @@ smb: \>
 
 - Se conecta a una base de datos `SQL Server` y nos comparten credenciales además de leer el contenido de la tabla `volume`.
 
-```C
+```c
 Rem Attribute VBA_ModuleType=VBADocumentModule
 Option VBASupport 1
 
