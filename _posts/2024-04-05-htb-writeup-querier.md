@@ -8,7 +8,7 @@ toc: true
 toc_label: "Contenido"
 toc_icon: "fire"
 header:
-  teaser: /assets/images/htb-writeup-querier/icon.png
+  teaser: /assets/images/htb-writeup-querier/3.png
   teaser_home_page: true
   icon: /assets/images/hackthebox.webp
 categories:
