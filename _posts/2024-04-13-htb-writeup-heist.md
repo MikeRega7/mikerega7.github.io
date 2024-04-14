@@ -62,7 +62,7 @@ PORT      STATE SERVICE      REASON
 49669/tcp open  unknown      syn-ack ttl 127
 ```
 
-- Ahora usamos la función `extractPorts` para copear los puertos abiertos a la `clipboard` y escanear los servicios que corren en los puertos.
+- Ahora usamos la función `extractPorts` para copear los puertos abiertos a la `clipboard` y escanear los servicios que corren en los puertos de la maquina.
 
 ```bash
 ➜  nmap which extractPorts
