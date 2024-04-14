@@ -99,7 +99,7 @@ extractPorts () {
 | Que nos reporte las tecnologías y servicios que están corriendo en los puertos abiertos. | -sCV      |
 | Que no lo exporte a un archivo normal.                                                   | -oN       |
 
-- Y listo
+- Y listo.
 
 ```bash
 ➜  nmap nmap -sCV -p80,135,445,5985,49669 10.129.116.26 -oN targeted
